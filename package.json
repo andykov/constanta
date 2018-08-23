@@ -1,0 +1,32 @@
+{
+  "name": "constanta",
+  "version": "1.0.0",
+  "description": "front-end dev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "del": "^3.0.0",
+    "fs": "0.0.1-security",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssnano": "^2.1.3",
+    "gulp-debug": "^4.0.0",
+    "gulp-include": "^2.3.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
+    "path": "^0.12.7",
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "postcss-inline-svg": "^3.1.1",
+    "sass-convert": "^0.5.2",
+    "sassdoc": "^2.5.0"
+  }
+}
