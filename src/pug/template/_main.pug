@@ -1,0 +1,26 @@
+doctype html
+html(lang="ru-RU")
+  head
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
+    title
+      block title
+
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&amp;subset=cyrillic")
+    link(rel="stylesheet" href="css/libs.css")
+    link(rel="stylesheet" href="css/template.css")
+
+    block css
+
+  body
+
+    include ../components/header/_header
+
+    main.layout
+      block content
+
+
+    block footer
+      include ../components/footer/_footer
+
+    script(src="../js/libs.js")
+    script(src="../js/template.js")

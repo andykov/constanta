@@ -1,0 +1,11 @@
+$header-background-color: $white-bis !default;
+
+.header {
+  background-color: $header-background-color;
+  padding: 3rem 1.5rem 6rem;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
