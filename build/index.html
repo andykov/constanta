@@ -9,25 +9,154 @@
     <link rel="stylesheet" href="css/template.css">
   </head>
   <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__inner">
-          <div class="header__logo"><img src="img/svg/logo.svg"></div>
-          <div class="header__nav">
-            <nav class="nav">
-              <ul class="nav__list">
-                    <li class="nav__item"><a class="nav__link" href="">Услуги</a></li>
-                    <li class="nav__item"><a class="nav__link" href="">Клиенты</a></li>
-                    <li class="nav__item"><a class="nav__link" href="">Карьера</a></li>
-                    <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
-              </ul>
-            </nav>
-            <div class="lang"><a class="lang__link" href="">ru</a><a class="lang__link" href="">en</a></div>
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-brand"><a class="navbar-item"><img src="img/svg/logo.svg"></a></div>
+        <div class="navbar-menu">
+          <div class="navbar-end"><a class="navbar-item" href="">Услуги</a><a class="navbar-item" href="">Клиенты</a><a class="navbar-item" href="">Карьера</a><a class="navbar-item" href="">Контакты</a>
+            <div class="navbar-item lang"><a class="lang__link" href="">ru</a><a class="lang__link" href="">en</a></div>
           </div>
         </div>
+        <!--.navbar-menu-->
+        <!--  a(href='').lang__link= 'ru'-->
+        <!--  a(href='').lang__link= 'en'-->
       </div>
-    </header>
+      <div class="hero">
+        <p class="title">Hero title</p>
+      </div>
+    </div>
+    <!--header.header-->
+    <!--  .container-->
+    <!--    .header__inner-->
+    <!--      .header__logo-->
+    <!--        img(src='img/svg/logo.svg')-->
+    <!--      .header__nav-->
+    <!--        nav.nav-->
+    <!--          ul.nav__list-->
+    <!--            +headerNav('','Услуги')-->
+    <!--            +headerNav('','Клиенты')-->
+    <!--            +headerNav('','Карьера')-->
+    <!--            +headerNav('','Контакты')-->
+    <!--        .lang-->
+    <!--          a(href='').lang__link= 'ru'-->
+    <!--          a(href='').lang__link= 'en'-->
     <main class="layout">
+      <div class="container is-widescreen">
+        <p>Text</p>
+      </div>
+      <div class="container is-fullhd">
+        <p>Text</p>
+      </div>
+      <section class="section">
+        <div class="container content">
+          <div class="columns is-centered">
+            <div class="column is-10">
+              <p>На технологических рынках России и СНГ Constanta работает c 2008 года.</p>
+              <p>Наш опыт объединяет компетенции консультантов, инвесторов, предпринимателей и отраслевых экспертов. В современном мире только комбинация этих навыков позволяет стартапам запускать успешные продукты, инвесторам находить лучшие объекты для инвестиций, а корпорациям лидировать, повышая акционерную стоимость.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container content">
+          <div class="columns is-centered">
+            <div class="column is-10">
+              <p>За 10 лет работы практически все наши заказчики стали нашими постоянными клиентами и партнерами. Среди них большинство лидеров сектора. Мы убеждены, что ценность работы консультанта должна быть измеряема и сосредоточена на практической ценности идей и рекомендаций. Глубокое понимание рынка позволяет нам предлагать не только лучшие доступные на рынке практики, но и реально оценивать их применимость к конкретной ситуации.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container content">
+          <h2>Услуги и направления</h2>
+          <p class="subtitle">Мы помогаем нашим клиентам в решении самых сложных задач, предоставляя лучшую в секторе экспертизу</p>
+          <div class="columns is-multiline">
+            <div class="column is-6"><a class="service">
+                <div class="service__head">
+                  <div class="service__title"><img src="img/svg/logo.svg"><span>Consulting</span></div>
+                  <div class="service__more">
+                    <button class="button">BTN</button>
+                  </div>
+                </div>
+                <div class="service__text">
+                  <p>Операционный и стратегический консалтинг</p>
+                </div></a></div>
+            <div class="column is-6">
+              <div class="box"><img src="img/svg/logo.svg"><span>Consulting</span>
+                <div class="content">
+                  <p>Операционный и стратегический консалтинг</p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="box">
+                <p class="title"><img src="img/svg/logo.svg"></p><span class="subtitle">Investments</span>
+                <div class="content">
+                  <p>Привлечение инвестиций, продажа бизнеса, транзакционная поддержка</p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="box">
+                <div class="title"><img src="img/svg/logo.svg"><span>Forensic</span></div>
+                <div class="content">
+                  <p>Предотвращение корпоративного мошенничества</p>
+                </div>
+              </div>
+            </div>
+            <div class="column is-6">
+              <div class="box">
+                <div class="title"><img src="img/svg/logo.svg"><span>Predtech</span></div>
+                <div class="content">
+                  <p><b>Big data,</b>предиктивная аналитика и моделирование</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <h2>Некоторые клиенты</h2>
+          <div class="columns is-multiline">
+            <div class="column is-4">
+              <figure class="image"><img src="img/client-logo-1.png"></figure>
+            </div>
+            <div class="column is-4">
+              <figure class="image"><img src="img/client-logo-2.png"></figure>
+            </div>
+            <div class="column is-4">
+              <figure class="image"><img src="img/client-logo-3.png"></figure>
+            </div>
+            <div class="column is-4">
+              <figure class="image"><img src="img/client-logo-4.png"></figure>
+            </div>
+            <div class="column is-4">
+              <figure class="image"><img src="img/client-logo-5.png"></figure>
+            </div>
+            <div class="column is-4">
+              <figure class="image"><img src="img/client-logo-6.png"></figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="columns is-gapless">
+            <div class="column is-5">
+              <div class="contacts has-background-danger">
+                <h2>Контакты</h2>
+                <p>127006, Россия, Москва,<br> Долгоруковская ул.,<br> д. 40, стр. 5</p>
+                <p>+7 945 123-45-67</p>
+                <p><a href="mailto:info@cpartners.ru">info@cpartners.ru</a></p>
+              </div>
+            </div>
+            <div class="column is-7">
+              <div class="map"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer"></footer>
     <script src="../js/libs.js"></script>

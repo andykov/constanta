@@ -21,7 +21,7 @@ $turquoise: hsl(171, 100%, 41%) !default;
 $cyan: hsl(204, 86%, 53%) !default;
 $blue: hsl(225, 32%, 43%) !default;
 $purple: hsl(271, 100%, 71%) !default;
-$red: hsl(348, 100%, 61%) !default;
+$red: hsl(19, 100%, 50%) !default;
 
 // Typography
 
@@ -56,11 +56,11 @@ $desktop: 960px + 2 * $gap !default;
 
 // 1152px container + 4rem
 $widescreen: 1152px + 2 * $gap !default;
-$widescreen-enabled: true !default;
+$widescreen-enabled: false !default;
 
 // 1344px container + 4rem
 $fullhd: 1344px + 2 * $gap !default;
-$fullhd-enabled: true !default;
+$fullhd-enabled: false !default;
 
 // Miscellaneous
 

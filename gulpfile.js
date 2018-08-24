@@ -30,11 +30,10 @@ var PATH = {
             // 'src/scripts/pages/*.js'
         ],
         IMG: [
-            '!src/images/icons/',
             'src/images/**/*.{jpg,jpeg,gif,png}'
         ],
         SVG: [
-          'src/images/svg/**/*.svg'
+            'src/images/svg/**/*.svg'
         ],
         FONTS: 'src/fonts/**'
     },
@@ -58,7 +57,8 @@ var PATH = {
         PUG: ['src/pug/**/*.pug'],
         SCSS: ['src/scss/**/*.scss'],
         JS: ['src/scripts/template.js', 'src/scripts/pages/*.js'],
-        SVG: ['src/images/svg/**/*.svg']
+        IMG: ['src/images/**/*.{jpg,jpeg,gif,png}'],
+        SVG: ['src/images/svg/*.svg']
     }
 };
 
@@ -221,6 +221,11 @@ gulp.task('fonts', function () {
 //         // }))
 //         .pipe(gulp.dest(PATH.BUILD.SVG));
 // });
+gulp.task('img', function () {
+    console.log('---------- Копирование IMG');
+    return gulp.src(PATH.SRC.IMG)
+        .pipe(gulp.dest(PATH.BUILD.IMG));
+});
 
 gulp.task('svg', function () {
     console.log('---------- Копирование SVG');
@@ -241,7 +246,7 @@ gulp.task('clean', function () {
 # All task
 --------------------------------------------------------------*/
 gulp.task('build', gulp.series('clean',
-    gulp.parallel('scss', 'pug', 'js', 'svg', 'fonts'))
+    gulp.parallel('scss', 'pug', 'js', 'img', 'svg', 'fonts'))
 );
 
 
@@ -261,7 +266,8 @@ gulp.task('serve', function () {
     gulp.watch(PATH.WATCH.PUG, gulp.series('pug'));
     gulp.watch(PATH.WATCH.SCSS, gulp.series('scss'));
     gulp.watch(PATH.WATCH.JS, gulp.series('js'));
-    // gulp.watch(PATH.WATCH.SVG, gulp.series('sprite:svg'));
+    gulp.watch(PATH.WATCH.IMG, gulp.series('img'));
+    gulp.watch(PATH.WATCH.SVG, gulp.series('svg'));
     // gulp.watch('src/img/svg/icons/**/*', ['svgstore']);
     // gulp.watch(['src/img/**/*', '!src/img/svg/icons/**/*'], ['webp']);
     // gulp.watch('src/js/**/*', ['browserify']);
