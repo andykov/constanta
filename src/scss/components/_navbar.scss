@@ -1,12 +1,13 @@
 $navbar-background-color: $white !default;
 $navbar-box-shadow-size: 0 2px 0 0 !default;
 $navbar-box-shadow-color: $background !default;
-$navbar-height: 3.25rem !default;
+$navbar-height: 1.1111111111111112rem !default;
 $navbar-padding-vertical: 1rem !default;
 $navbar-padding-horizontal: 2rem !default;
 $navbar-z: 30 !default;
 $navbar-fixed-z: 30 !default;
 
+$navbar-item-size: $size-6 !default;
 $navbar-item-color: $grey-dark !default;
 $navbar-item-hover-color: $link !default;
 $navbar-item-hover-background-color: $white-bis !default;
@@ -51,9 +52,18 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
 
 .navbar {
   background-color: $navbar-background-color;
+  padding: 0.9722222222222222rem 0;
   min-height: $navbar-height;
   position: relative;
   z-index: $navbar-z;
+
+  &-item {
+    &:hover,
+    &.is-active {
+      color: $orange;
+    }
+  }
+
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 2);
@@ -63,19 +73,19 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
       .navbar-brand {
         & > .navbar-item,
         .navbar-link {
-          color: $color-invert;
+          //color: $color-invert;
         }
         & > a.navbar-item,
         .navbar-link {
           &:hover,
           &.is-active {
-            background-color: darken($color, 5%);
-            color: $color-invert;
+            //background-color: darken($color, 5%);
+            //color: $color-invert;
           }
         }
         .navbar-link {
           &::after {
-            border-color: $color-invert;
+            //border-color: $color-invert;
           }
         }
       }
@@ -84,19 +94,19 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
         .navbar-end {
           & > .navbar-item,
           .navbar-link {
-            color: $color-invert;
+            //color: $color-invert;
           }
           & > a.navbar-item,
           .navbar-link {
             &:hover,
             &.is-active {
-              background-color: darken($color, 5%);
-              color: $color-invert;
+              //background-color: darken($color, 5%);
+              //color: $color-invert;
             }
           }
           .navbar-link {
             &::after {
-              border-color: $color-invert;
+              //border-color: $color-invert;
             }
           }
         }
@@ -184,10 +194,11 @@ body {
 
 .navbar-item,
 .navbar-link {
+  font-size: $navbar-item-size;
   color: $navbar-item-color;
   display: block;
-  line-height: 1.5;
-  padding: 0.5rem 0.75rem;
+  line-height: 1;
+  padding: 0.195rem 0.8490rem;
   position: relative;
   .icon {
     &:only-child {
@@ -202,8 +213,8 @@ a.navbar-item,
   cursor: pointer;
   &:hover,
   &.is-active {
-    background-color: $navbar-item-hover-background-color;
-    color: $navbar-item-hover-color;
+    //background-color: $navbar-item-hover-background-color;
+    //color: $navbar-item-hover-color;
   }
 }
 
@@ -211,6 +222,9 @@ a.navbar-item,
   display: block;
   flex-grow: 0;
   flex-shrink: 0;
+  &:not(:first-child) {
+    margin-left: 20px;
+  }
   img {
     max-height: $navbar-item-img-max-height;
   }

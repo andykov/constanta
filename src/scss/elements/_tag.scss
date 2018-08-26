@@ -56,15 +56,15 @@ $tag-delete-margin: 1px !default;
 .tag:not(body) {
   align-items: center;
   background-color: $tag-background-color;
-  border-radius: $tag-radius;
+  //border-radius: $tag-radius;
   color: $tag-color;
   display: inline-flex;
   font-size: $size-small;
   height: 2em;
   justify-content: center;
   line-height: 1.5;
-  padding-left: 0.75em;
-  padding-right: 0.75em;
+  padding-left: 0.978em;
+  padding-right: 0.978em;
   white-space: nowrap;
   .delete {
     margin-left: 0.25rem;

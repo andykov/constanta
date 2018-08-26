@@ -3,3 +3,13 @@
 @import "minireset.scss";
 @import "generic.scss";
 @import "helpers.scss";
+
+svg {
+  max-height: 100%;
+  max-width: 100%;
+  display: inline-block;
+  font-size: inherit;
+  height: 1em;
+  overflow: visible;
+  vertical-align: -.125em;
+}
