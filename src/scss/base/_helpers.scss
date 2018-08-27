@@ -25,7 +25,21 @@
 }
 
 // Typography
-
+.is-extra-size-1 {
+  font-size: 4.444444444444445rem;
+  line-height: 1.5;
+}
+.is-size-1 {
+  font-weight: $weight-bold;
+  line-height: 1.185;
+}
+.is-size-2 {
+  font-weight: $weight-semibold;
+  line-height: 1.285;
+}
+.is-size-3 {
+  line-height: 1.5394;
+}
 @mixin typography-size($target: "") {
   @each $size in $sizes {
     $i: index($sizes, $size);

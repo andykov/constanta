@@ -9,44 +9,51 @@ block title
 
 block content
   .container.is-widescreen
-    p Text
-  .container.is-fullhd
-    p Text
+    .hero
+      .columns
+        .column
+          h1.is-size-1 Ведущий независимый консультант
+          div.is-size-3 и инвестиционный партнер на рынках Technology Media Telecom России и стран СНГ
+        .column
+
   section.section
     .container.content
       .columns.is-centered
         .column.is-10
           p На технологических рынках России и СНГ Constanta работает c 2008 года.
           p Наш опыт объединяет компетенции консультантов, инвесторов, предпринимателей и отраслевых экспертов. В современном мире только комбинация этих навыков позволяет стартапам запускать успешные продукты, инвесторам находить лучшие объекты для инвестиций, а корпорациям лидировать, повышая акционерную стоимость.
+
   section.section.has-text-centered
     .container.content
-      h2 Ключевые цифры
+      h2.is-size-2 Ключевые цифры
       .columns
         .column
-          span.is-block.is-size-1.has-text-danger 150+
+          div.is-extra-size-1.has-text-danger 150+
           p
-            span.tag.is-danger.is-size-5 проектов
-          p.has-text-grey стратегического, продуктового, операционного и инвестиционного консалтинга
+            span.tag.is-danger.is-size-4 проектов
+          p.is-size-5.has-text-grey стратегического, продуктового, операционного и инвестиционного консалтинга
         .column
-          span.is-block.is-size-1.has-text-danger 300+
+          div.is-extra-size-1.has-text-danger 300+
           p
-            span.tag.is-danger.is-size-5 млн долларов США
-          p.has-text-grey объем сделок, в которых Constanta выступала эксклюзивным советником продавцов Активов. Объем сделок, в которых Constanta консультанта — $10 млрд
+            span.tag.is-danger.is-size-4 млн долларов США
+          p.is-size-5.has-text-grey объем сделок, в которых Constanta выступала эксклюзивным советником продавцов Активов. Объем сделок, в которых Constanta консультанта — $10 млрд
         .column
-          span.is-block.is-size-1.has-text-danger 50+
+          div.is-extra-size-1.has-text-danger 50+
           p
-            span.tag.is-danger.is-size-5 сделок M&A
-          p.has-text-grey в России и странах СНГ. Constanta постоянно выступает советником крупнейших инвестиционных фондов
+            span.tag.is-danger.is-size-4 сделок M&A
+          p.is-size-5.has-text-grey в России и странах СНГ. Constanta постоянно выступает советником крупнейших инвестиционных фондов
 
   section.section
     .container.content
       .columns.is-centered
         .column.is-10
           p За 10 лет работы практически все наши заказчики стали нашими постоянными клиентами и партнерами. Среди них большинство лидеров сектора. Мы убеждены, что ценность работы консультанта должна быть измеряема и сосредоточена на практической ценности идей и рекомендаций. Глубокое понимание рынка позволяет нам предлагать не только лучшие доступные на рынке практики, но и реально оценивать их применимость к конкретной ситуации.
+
   section.section
     .container.content
-      h2 Услуги и направления
-      p.subtitle Мы помогаем нашим клиентам в решении самых сложных задач, предоставляя лучшую в секторе экспертизу
+      .has-text-centered
+        h2.is-size-2 Услуги и направления
+        p.subtitle Мы помогаем нашим клиентам в решении самых сложных задач, предоставляя лучшую в секторе экспертизу
       .columns.is-multiline
         //.column.is-6
         //  a.service
@@ -60,8 +67,7 @@ block content
         //      p Операционный и стратегический консалтинг
         .column.is-6
           a(href="/").box
-            img(src='img/svg/logo.svg').image
-            span.subtitle.is-3 Consulting
+            img(src='img/svg/logo-consulting.svg').image
             p Операционный и стратегический консалтинг
             span.icon
               | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
@@ -69,8 +75,7 @@ block content
               | </svg>
         .column.is-6
           a(href="/").box
-            img(src='img/svg/logo.svg').image
-            span.subtitle.is-3 Investments
+            img(src='img/svg/logo-investments.svg').image
             p Привлечение инвестиций, продажа бизнеса, транзакционная поддержка
             span.icon
               | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
@@ -78,8 +83,7 @@ block content
               | </svg>
         .column.is-6
           a(href="/").box
-            img(src='img/svg/logo.svg').image
-            span.subtitle.is-3 Forensic
+            img(src='img/svg/logo-forensic.svg').image
             p Предотвращение корпоративного мошенничества
             span.icon
               | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
@@ -87,17 +91,17 @@ block content
               | </svg>
         .column.is-6
           a(href="/").box
-            img(src='img/svg/logo.svg').image
-            span.subtitle.is-3 Predtech
+            img(src='img/svg/logo-predtech.svg').image
             p Big data, предиктивная аналитика и моделирование
             span.icon
               | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
               | <path d="M24.6525 11.5L13.5 23L12.7532 22.2519L23.08 12H0V11H23.06L12.7711 0.728867L13.5 0L24.6525 11.5Z"/>
               | </svg>
+
   section.section
     .container
-      h2 Некоторые клиенты
-      .columns.is-multiline
+      h2.is-size-2.has-text-centered Некоторые клиенты
+      .columns.is-multiline.is-vcentered
         .column.is-4
           figure.image
             img(src="img/client-logo-1.png")
@@ -116,12 +120,13 @@ block content
         .column.is-4
           figure.image
             img(src="img/client-logo-6.png")
+
   section.section
     .container
       .columns.is-gapless
         .column.is-5
           .contacts.has-background-danger
-            h2 Контакты
+            h2.is-size-2.has-text-white Контакты
             p
               | 127006, Россия, Москва,
               br
@@ -134,3 +139,4 @@ block content
 
         .column.is-7
           .map
+            img(src="img/map.jpg")
