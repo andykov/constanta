@@ -1,9 +1,28 @@
 .contacts {
+  background-color: #FF5200;
   color: #fff;
-  padding: 30px 50px;
-  min-height: 480px;
+  padding: 45px 50px;
+  //min-height: 480px;
+  &__list {
+    margin-left: -50px;
+    margin-right: -50px;
+    margin-bottom: 10px;
+    font-weight: $weight-semibold;
 
-  a {
-    color: #fff;
+    a {
+      display: block;
+      padding: 16px 50px;
+      color: #fff;
+
+      &:hover {
+        background-color: rgba(0,0,0,0.08);
+      }
+    }
   }
+}
+
+.map-wide {
+  padding-top: 139px;
+  margin-bottom: -198px;
+  text-align: center;
 }

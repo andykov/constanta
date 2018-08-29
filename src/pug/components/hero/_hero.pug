@@ -1,0 +1,10 @@
+// mixin hero
+mixin hero(img, title, logo)
+    .hero__icon
+        img(src= "img/svg/" + img)
+    if title
+        .hero__title
+            h1.is-size-1= title
+    else if logo
+        .hero__img
+            img(src= "img/svg/" + logo, style="width: 600px; height: 172px;")

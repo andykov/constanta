@@ -5,26 +5,28 @@ mixin tile(img, subtile, text)
     a(href=url).nav__link= text
 
 block title
-  | Главная страница
+  | Constanta
 
 block content
-  .container.is-widescreen
-    .hero
-      .columns
-        .column
-          h1.is-size-1 Ведущий независимый консультант
-          div.is-size-3 и инвестиционный партнер на рынках Technology Media Telecom России и стран СНГ
-        .column
+  section.section
+    .container.is-size-wide
+      .hero
+        .columns
+          .column
+            h1.is-size-1 Ведущий независимый консультант
+            div.is-size-3 и инвестиционный партнер на рынках Technology Media Telecom России и стран СНГ
+          .column
+            img(src="img/svg/hero-img.svg")
 
   section.section
-    .container.content
+    .container
       .columns.is-centered
         .column.is-10
           p На технологических рынках России и СНГ Constanta работает c 2008 года.
           p Наш опыт объединяет компетенции консультантов, инвесторов, предпринимателей и отраслевых экспертов. В современном мире только комбинация этих навыков позволяет стартапам запускать успешные продукты, инвесторам находить лучшие объекты для инвестиций, а корпорациям лидировать, повышая акционерную стоимость.
 
   section.section.has-text-centered
-    .container.content
+    .container
       h2.is-size-2 Ключевые цифры
       .columns
         .column
@@ -44,82 +46,98 @@ block content
           p.is-size-5.has-text-grey в России и странах СНГ. Constanta постоянно выступает советником крупнейших инвестиционных фондов
 
   section.section
-    .container.content
+    .container
       .columns.is-centered
         .column.is-10
           p За 10 лет работы практически все наши заказчики стали нашими постоянными клиентами и партнерами. Среди них большинство лидеров сектора. Мы убеждены, что ценность работы консультанта должна быть измеряема и сосредоточена на практической ценности идей и рекомендаций. Глубокое понимание рынка позволяет нам предлагать не только лучшие доступные на рынке практики, но и реально оценивать их применимость к конкретной ситуации.
 
   section.section
-    .container.content
+    .container
       .has-text-centered
         h2.is-size-2 Услуги и направления
         p.subtitle Мы помогаем нашим клиентам в решении самых сложных задач, предоставляя лучшую в секторе экспертизу
       .columns.is-multiline
-        //.column.is-6
-        //  a.service
-        //    .service__head
-        //      .service__title
-        //        img(src='img/svg/logo.svg')
-        //        span Consulting
-        //      .service__more
-        //        button.button BTN
-        //    .service__text
-        //      p Операционный и стратегический консалтинг
         .column.is-6
-          a(href="/").box
-            img(src='img/svg/logo-consulting.svg').image
-            p Операционный и стратегический консалтинг
-            span.icon
-              | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
-              | <path d="M24.6525 11.5L13.5 23L12.7532 22.2519L23.08 12H0V11H23.06L12.7711 0.728867L13.5 0L24.6525 11.5Z"/>
-              | </svg>
+          a(href="/").box.is-arrow
+            .box__img
+              img(src='img/svg/logo-consulting.svg').image
+              span.icon
+                | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
+                | <path d="M24.6525 11.5L13.5 23L12.7532 22.2519L23.08 12H0V11H23.06L12.7711 0.728867L13.5 0L24.6525 11.5Z"/>
+                | </svg>
+            .box__text
+              p Операционный и стратегический консалтинг
         .column.is-6
-          a(href="/").box
-            img(src='img/svg/logo-investments.svg').image
-            p Привлечение инвестиций, продажа бизнеса, транзакционная поддержка
-            span.icon
-              | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
-              | <path d="M24.6525 11.5L13.5 23L12.7532 22.2519L23.08 12H0V11H23.06L12.7711 0.728867L13.5 0L24.6525 11.5Z"/>
-              | </svg>
+          a(href="/").box.is-arrow
+            .box__img
+              img(src='img/svg/logo-investments.svg').image
+              span.icon
+                | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
+                | <path d="M24.6525 11.5L13.5 23L12.7532 22.2519L23.08 12H0V11H23.06L12.7711 0.728867L13.5 0L24.6525 11.5Z"/>
+                | </svg>
+            .box__text
+              p Привлечение инвестиций, продажа бизнеса, транзакционная поддержка
         .column.is-6
-          a(href="/").box
-            img(src='img/svg/logo-forensic.svg').image
-            p Предотвращение корпоративного мошенничества
-            span.icon
-              | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
-              | <path d="M24.6525 11.5L13.5 23L12.7532 22.2519L23.08 12H0V11H23.06L12.7711 0.728867L13.5 0L24.6525 11.5Z"/>
-              | </svg>
+          a(href="/").box.is-arrow
+            .box__img
+              img(src='img/svg/logo-forensic.svg').image
+              span.icon
+                | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
+                | <path d="M24.6525 11.5L13.5 23L12.7532 22.2519L23.08 12H0V11H23.06L12.7711 0.728867L13.5 0L24.6525 11.5Z"/>
+                | </svg>
+            .box__text
+              p Предотвращение корпоративного мошенничества
         .column.is-6
-          a(href="/").box
-            img(src='img/svg/logo-predtech.svg').image
-            p Big data, предиктивная аналитика и моделирование
-            span.icon
-              | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
-              | <path d="M24.6525 11.5L13.5 23L12.7532 22.2519L23.08 12H0V11H23.06L12.7711 0.728867L13.5 0L24.6525 11.5Z"/>
-              | </svg>
+          a(href="/").box.is-arrow
+            .box__img
+              img(src='img/svg/logo-predtech.svg').image
+              span.icon
+                | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
+                | <path d="M24.6525 11.5L13.5 23L12.7532 22.2519L23.08 12H0V11H23.06L12.7711 0.728867L13.5 0L24.6525 11.5Z"/>
+                | </svg>
+            .box__text
+              p Big data, предиктивная аналитика и моделирование
 
-  section.section
+  section.section.clients
     .container
       h2.is-size-2.has-text-centered Некоторые клиенты
       .columns.is-multiline.is-vcentered
         .column.is-4
-          figure.image
-            img(src="img/client-logo-1.png")
+          figure.image.is-grayscale
+            img(src="img/svg/clients-logo/logo-mts.svg" width="309px" height="140px")
         .column.is-4
-          figure.image
-            img(src="img/client-logo-2.png")
+          figure.image.is-grayscale
+            img(src="img/svg/clients-logo/logo-rostelecom.svg" width="309px" height="140px")
         .column.is-4
-          figure.image
-            img(src="img/client-logo-3.png")
+          figure.image.is-grayscale
+            img(src="img/svg/clients-logo/logo-beeline.svg" width="309px" height="140px")
         .column.is-4
-          figure.image
-            img(src="img/client-logo-4.png")
+          figure.image.is-grayscale
+            img(src="img/svg/clients-logo/logo-pepsico.svg" width="309px" height="140px")
         .column.is-4
-          figure.image
-            img(src="img/client-logo-5.png")
+          figure.image.is-grayscale
+            img(src="img/svg/clients-logo/logo-alfabank.svg" width="309px" height="140px")
         .column.is-4
-          figure.image
-            img(src="img/client-logo-6.png")
+          figure.image.is-grayscale
+            img(src="img/svg/clients-logo/logo-euroset.svg" width="309px" height="140px")
+        .column.is-4
+          figure.image.is-grayscale
+            img(src="img/svg/clients-logo/logo-norilsk.svg" width="309px" height="140px")
+        .column.is-4
+          figure.image.is-grayscale
+            img(src="img/svg/clients-logo/logo-rosneft.svg" width="309px" height="140px")
+        .column.is-4
+          figure.image.is-grayscale
+            img(src="img/svg/clients-logo/logo-vgtrk.svg" width="309px" height="140px")
+        .column.is-4
+          figure.image.is-grayscale
+            img(src="img/svg/clients-logo/logo-baring.svg" width="309px" height="140px")
+        .column.is-4
+          figure.image.is-grayscale
+            img(src="img/svg/clients-logo/logo-o1.svg" width="309px" height="140px")
+        .column.is-4
+          figure.image.is-grayscale
+            img(src="img/svg/clients-logo/logo-capman.svg" width="309px" height="140px")
 
   section.section
     .container

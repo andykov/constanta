@@ -1,0 +1,22 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="200" fill="black" fill-opacity="0"/>
+<rect width="200" height="200" fill="black" fill-opacity="0"/>
+<path d="M171 157C171 158.657 169.657 160 168 160H119V119H144V89H171V157Z" fill="#FFA230"/>
+<g opacity="0.7">
+<rect width="122" height="118" fill="black" fill-opacity="0" transform="translate(40 42)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M76 54C76 60.6885 70.6885 66 64 66C57.3115 66 52 60.6885 52 54C52 47.3115 57.3115 42 64 42C70.6885 42 76 47.3115 76 54Z" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 92C40 82.3584 47.4306 74 57.0749 74H66" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M88 92C88 82.3584 80.5694 74 70.9251 74H62" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M47.9103 116H40V92" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M80 116H88V92" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M48 96V157.198" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M80 96V157.198" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M64 120V156.633" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40 158H162" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M86 126H104" stroke="black" stroke-width="3.78102"/>
+<path d="M104 159.055V104H128" stroke="black" stroke-width="3.78102"/>
+<path d="M128 159.055V74H152V159.055" stroke="black" stroke-width="3.78102"/>
+<path d="M92 76C92 76 115.718 77.9518 127.632 49.5941" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M113.74 51.9786L129.104 46.4201L134.665 61.7804" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

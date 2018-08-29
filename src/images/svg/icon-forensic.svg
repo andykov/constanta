@@ -1,0 +1,11 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="200" fill="black" fill-opacity="0"/>
+<rect width="200" height="200" fill="black" fill-opacity="0"/>
+<path d="M130 117C152.091 117 170 99.0914 170 77C170 54.9086 152.091 37 130 37C107.909 37 90 54.9086 90 77C90 99.0914 107.909 117 130 117Z" fill="#FFA230"/>
+<rect width="152.498" height="100.983" fill="black" fill-opacity="0" transform="translate(24.1328 55.2183)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M155.292 101.68C157.569 104.122 157.569 107.879 155.292 110.321C147.129 119.525 125.868 140 101 140C76.1322 140 54.8712 119.525 46.7085 110.321C44.4305 107.879 44.4305 104.122 46.7085 101.68C54.8712 92.476 76.1322 72.0013 101 72.0013C125.868 71.8134 147.129 92.476 155.292 101.68Z" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M176.63 115.177C166.986 126.142 147.697 147.505 121.79 156.201" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.1328 98.1329C34.5335 86.4117 56.0913 62.4022 85.0242 55.2183" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M101 128C113.15 128 123 118.15 123 106C123 93.8497 113.15 84 101 84C88.8497 84 79 93.8497 79 106C79 118.15 88.8497 128 101 128Z" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M101 114C105.418 114 109 110.418 109 106C109 101.582 105.418 98 101 98C96.5817 98 93 101.582 93 106C93 110.418 96.5817 114 101 114Z" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

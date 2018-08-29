@@ -1,6 +1,8 @@
 .container {
   margin: 0 auto;
   position: relative;
+
+
   @include desktop {
     max-width: $desktop - 2 * $gap;
     width: $desktop - 2 * $gap;
@@ -10,10 +12,17 @@
       max-width: none;
       width: auto;
     }
+    &.is-size-narrow {
+      max-width: 720px;
+    }
   }
 
   @include until-widescreen {
     &.is-widescreen {
+      max-width: $widescreen - 2 * $gap;
+      width: auto;
+    }
+    &.is-size-wide {
       max-width: $widescreen - 2 * $gap;
       width: auto;
     }

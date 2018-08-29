@@ -5,6 +5,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  &__icon {
+    margin-bottom: 55px;
+  }
+
+  &__img {
+
+  }
+
   .navbar {
     background: none;
   }

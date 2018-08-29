@@ -1,0 +1,40 @@
+extends ../template/_main
+
+block title
+    | Contacts
+
+block content
+    section.section
+        .container.is-size-narrow
+            .hero.has-text-centered
+                +hero('icon-contacts.svg', 'Контакты')
+    section.section
+        .container
+            .has-text-centered
+                .columns
+                    .column.has-text-right-tablet
+                        span.is-size-2.has-text-grey.has-text-weight-normal Телефон
+                    .column.has-text-left-tablet
+                        a(href="tel:+79451234567").is-size-2.has-text-weight-normal +7 945 123-45-67
+                .columns
+                    .column.has-text-right-tablet
+                        span.is-size-2.has-text-grey.has-text-weight-normal Электронная почта
+                    .column.has-text-left-tablet
+                        a(href="mailto:info@cpartners.ru").is-size-2.has-text-weight-normal info@cpartners.ru
+            .map-wide
+                img(src="img/map-2.jpg")
+block footer
+    footer.footer
+        .container
+            .columns.is-centered.is-gapless
+                .column.is-6
+                    .contacts.has-text-centered
+                        //.contacts__title
+                            //h2.is-size-2.has-text-white Контакты
+                        ul.contacts__list
+                            li
+                                | 127006, Россия, Москва,
+                                br
+                                |  Долгоруковская ул., д. 40, стр. 5
+                        p.has-text-centered
+                            span.is-size-7.has-text-grey-dark © Constanta, 2009–2018

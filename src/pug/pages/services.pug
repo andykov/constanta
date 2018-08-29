@@ -5,110 +5,69 @@ mixin tile(img, subtile, text)
     a(href=url).nav__link= text
 
 block title
-  | Главная страница
+  | Services
 
 block content
-  //.container.is-widescreen
-  //  p Text
   section.section
-    .container
-      h1.title.has-text-centered Услуги и направления работы
+    .container.is-size-narrow
+      .hero.has-text-centered
+        +hero('icon-services.svg', 'Услуги и направления работы')
   section.section
-    .container.content
+    .container.is-size-narrow
       .columns.is-centered
         .column.is-10
-          p На технологических рынках России и СНГ Constanta работает c 2008 года.
-          p Наш опыт объединяет компетенции консультантов, инвесторов, предпринимателей и отраслевых экспертов. В современном мире только комбинация этих навыков позволяет стартапам запускать успешные продукты, инвесторам находить лучшие объекты для инвестиций, а корпорациям лидировать, повышая акционерную стоимость.
+          p Наш опыт объединяет компетенции консультанта, менеджера, инвестора и предпринимателя. В современном мире только комбинация этих навыков позволяет стартапам выводить на рынок успешные продукты, корпорациям достигать оптимальных операционных показателей, а инвесторам находить лучшие объекты для инвестиций.
 
   section.section
-    .container.content
-      .columns.is-centered
-        .column.is-10
-          p За 10 лет работы практически все наши заказчики стали нашими постоянными клиентами и партнерами. Среди них большинство лидеров сектора. Мы убеждены, что ценность работы консультанта должна быть измеряема и сосредоточена на практической ценности идей и рекомендаций. Глубокое понимание рынка позволяет нам предлагать не только лучшие доступные на рынке практики, но и реально оценивать их применимость к конкретной ситуации.
-  section.section
-    .container.content
-      h2 Услуги и направления
-      p.subtitle Мы помогаем нашим клиентам в решении самых сложных задач, предоставляя лучшую в секторе экспертизу
-      .columns.is-multiline.is-gapless
-        //.column.is-6
-        //  a.service
-        //    .service__head
-        //      .service__title
-        //        img(src='img/svg/logo.svg')
-        //        span Consulting
-        //      .service__more
-        //        button.button BTN
-        //    .service__text
-        //      p Операционный и стратегический консалтинг
-        .column.is-6
-          a(href="/").box.box--gapless
-            img(src='img/svg/logo-consulting.svg').image
-            p Операционный и стратегический консалтинг
-            span.icon
-              | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
-              | <path d="M24.6525 11.5L13.5 23L12.7532 22.2519L23.08 12H0V11H23.06L12.7711 0.728867L13.5 0L24.6525 11.5Z"/>
-              | </svg>
-        .column.is-6
-          a(href="/").box.box--gapless
-            img(src='img/svg/logo-investments.svg').image
-            p Привлечение инвестиций, продажа бизнеса, транзакционная поддержка
-            span.icon
-              | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
-              | <path d="M24.6525 11.5L13.5 23L12.7532 22.2519L23.08 12H0V11H23.06L12.7711 0.728867L13.5 0L24.6525 11.5Z"/>
-              | </svg>
-        .column.is-6
-          a(href="/").box
-            img(src='img/svg/logo-forensic.svg').image
-            p Предотвращение корпоративного мошенничества
-            span.icon
-              | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
-              | <path d="M24.6525 11.5L13.5 23L12.7532 22.2519L23.08 12H0V11H23.06L12.7711 0.728867L13.5 0L24.6525 11.5Z"/>
-              | </svg>
-        .column.is-6
-          a(href="/").box
-            img(src='img/svg/logo-predtech.svg').image
-            p Big data, предиктивная аналитика и моделирование
-            span.icon
-              | <svg width="25" height="23" viewBox="0 0 25 23" xmlns="http://www.w3.org/2000/svg">
-              | <path d="M24.6525 11.5L13.5 23L12.7532 22.2519L23.08 12H0V11H23.06L12.7711 0.728867L13.5 0L24.6525 11.5Z"/>
-              | </svg>
-  section.section
     .container
-      h2 Некоторые клиенты
-      .columns.is-multiline
-        .column.is-4
-          figure.image
-            img(src="img/client-logo-1.png")
-        .column.is-4
-          figure.image
-            img(src="img/client-logo-2.png")
-        .column.is-4
-          figure.image
-            img(src="img/client-logo-3.png")
-        .column.is-4
-          figure.image
-            img(src="img/client-logo-4.png")
-        .column.is-4
-          figure.image
-            img(src="img/client-logo-5.png")
-        .column.is-4
-          figure.image
-            img(src="img/client-logo-6.png")
-  section.section
-    .container
-      .columns.is-gapless
-        .column.is-5
-          .contacts.has-background-danger
-            h2 Контакты
-            p
-              | 127006, Россия, Москва,
-              br
-              |  Долгоруковская ул.,
-              br
-              |  д. 40, стр. 5
-            p +7 945 123-45-67
-            p
-              a(href="mailto:info@cpartners.ru") info@cpartners.ru
+      h3.is-size-3.has-text-centered.has-text-grey Мы помогаем нашим клиентам в решении самых сложных задач, предоставляя лучшую в секторе экспертизу
+      .cards.is-border-top
+        .columns.is-multiline.is-gapless
+          .column.is-6
+            .cards__item.is-paddingless
+              a(href="/").box
+                .box__img
+                  img(src='img/svg/logo-consulting.svg').image
+                .box__text
+                  p Операционный и стратегический консалтинг
+          .column.is-6
+            .cards__item.is-paddingless
+              a(href="/").box
+                .box__img
+                  img(src='img/svg/logo-investments.svg').image
+                .box__text
+                  p Привлечение инвестиций, продажа бизнеса, транзакционная поддержка
+          .column.is-6
+            .cards__item.is-paddingless
+              a(href="/").box
+                .box__img
+                  img(src='img/svg/logo-forensic.svg').image
+                .box__text
+                  p Предотвращение корпоративного мошенничества
+          .column.is-6
+            .cards__item.is-paddingless
+              a(href="/").box
+                .box__img
+                  img(src='img/svg/logo-predtech.svg').image
+                .box__text
+                  p Big data, предиктивная аналитика и моделирование
 
-        .column.is-7
-          .map
+block footer
+  footer.footer
+    .container
+      .columns.is-centered.is-gapless
+        .column.is-6
+          .contacts.has-text-centered
+            //.contacts__title
+                //h2.is-size-2.has-text-white Контакты
+            ul.contacts__list
+              li
+                | 127006, Россия, Москва,
+                br
+                |  Долгоруковская ул., д. 40, стр. 5
+              li
+                a(href="tel:+79451234567") +7 945 123-45-67
+              li
+                a(href="mailto:info@cpartners.ru") info@cpartners.ru
+            p.has-text-centered
+              span.is-size-7.has-text-grey-dark © Constanta, 2009–2018

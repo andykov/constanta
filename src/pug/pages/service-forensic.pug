@@ -1,0 +1,177 @@
+extends ../template/_main
+
+block title
+    | Forensic
+
+block content
+    section.section
+        .container.is-size-narrow
+            .hero.has-text-centered
+                +hero('icon-forensic.svg', '', 'logo-forensic.svg')
+    section.section
+        .container.is-size-narrow
+            .intro
+                p Объединив возможности автоматизации и лучших аудиторских практик, включающих десятки специализированных тестов, мы предлагаем уникальную систему риск-менеджмента корпорации
+                ul.is-marker-orange
+                    li Источниками внешних данных являются все доступные открытые реестры
+                    li Возможность добавлять любые структурированные внутренние данные и на их основе формировать собственные тесты
+                    li Автоматизация процесса сбора и анализа данных позволяет отказаться от принципа выборочности проверяемых объектов
+                    li Сокращение трудозатрат на стадии предварительной проверки и подготовки данных благодаря встроенным алгоритмам анализа
+                    li Использование статистических методов и предиктивного анализа
+                    li Встроенный BI-модуль позволяет создавать кастомизируемые под ваши специфичные потребности тесты и отчеты
+    section.section
+        .container
+            h2.is-size-2.has-text-centered Примеры кейсов
+            .cards.is-border-top
+                .cards__item
+                    .columns
+                        .column.is-4
+                            h3.is-size-3 Клиент #1
+                        .column.is-8
+                            .columns
+                                .column
+                                    span.is-size-2.is-block.has-text-weight-normal.has-text-danger 3000
+                                    span контрагентов
+                                .column
+                                    span.is-size-2.is-block.has-text-weight-normal.has-text-danger 16 000
+                                    span сотрудников
+                                .column
+                                    span.is-size-2.is-block.has-text-weight-normal.has-text-danger 150 000
+                                    span
+                                        | транзакций. 
+                                        br
+                                        | на общую сумму.
+                                        br
+                                        | более 30 млрд руб.
+                            ul.is-list-icon
+                                li
+                                    span.icon
+                                        | <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        |   <rect width="20" height="20" fill="black" fill-opacity="0"/>
+                                        |   <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 15.5229 4.47754 20 10 20C15.5225 20 20 15.5229 20 10C20 4.47705 15.5225 0 10 0C4.47754 0 0 4.47705 0 10ZM14.6562 6.75757L11.4141 10L14.6562 13.2427L13.2422 14.657L10 11.4143L6.75684 14.657L5.34277 13.2427L8.58496 10L5.34277 6.75757L6.75684 5.34326L10 8.58594L13.2422 5.34326L14.6562 6.75757Z" fill="#EF0505"/>
+                                        | </svg>
+                                    | 5 случаев занижения доходов в налоговой отчётности
+                                li
+                                    span.icon
+                                        | <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        |   <rect width="20" height="20" fill="black" fill-opacity="0"/>
+                                        |   <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 15.5229 4.47754 20 10 20C15.5225 20 20 15.5229 20 10C20 4.47705 15.5225 0 10 0C4.47754 0 0 4.47705 0 10ZM14.6562 6.75757L11.4141 10L14.6562 13.2427L13.2422 14.657L10 11.4143L6.75684 14.657L5.34277 13.2427L8.58496 10L5.34277 6.75757L6.75684 5.34326L10 8.58594L13.2422 5.34326L14.6562 6.75757Z" fill="#EF0505"/>
+                                        | </svg>
+                                    | 2 сотрудника являются массовыми директорами
+                                li
+                                    span.icon
+                                        | <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        |   <rect width="20" height="20" fill="black" fill-opacity="0"/>
+                                        |   <rect width="20" height="20" fill="black" fill-opacity="0"/>
+                                        |   <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20Z" fill="#E8EC26"/>
+                                        |   <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5H9V11H11V5ZM11 13H9V15H11V13Z" fill="#222222"/>
+                                        | </svg>
+                                    | 15 сотрудников имеют собственный бизнес или являются директорами
+                .cards__item
+                    .columns
+                        .column.is-4
+                            h3.is-size-3 Клиент #2
+                        .column.is-8
+                            .columns
+                                .column
+                                    | 3000
+                                    span контрагентов
+                                .column
+                                    | 3000
+                                    span контрагентов
+                                .column
+                                    | 3000
+                                    span контрагентов
+                            ul.is-list-icon
+                                li
+                                    span.icon
+                                        | <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        |   <rect width="20" height="20" fill="black" fill-opacity="0"/>
+                                        |   <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 15.5229 4.47754 20 10 20C15.5225 20 20 15.5229 20 10C20 4.47705 15.5225 0 10 0C4.47754 0 0 4.47705 0 10ZM14.6562 6.75757L11.4141 10L14.6562 13.2427L13.2422 14.657L10 11.4143L6.75684 14.657L5.34277 13.2427L8.58496 10L5.34277 6.75757L6.75684 5.34326L10 8.58594L13.2422 5.34326L14.6562 6.75757Z" fill="#EF0505"/>
+                                        | </svg>
+                                    | случая аффилированности сотрудников с поставщиками и клиентами
+                                li
+                                    span.icon
+                                        | <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        |   <rect width="20" height="20" fill="black" fill-opacity="0"/>
+                                        |   <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 15.5229 4.47754 20 10 20C15.5225 20 20 15.5229 20 10C20 4.47705 15.5225 0 10 0C4.47754 0 0 4.47705 0 10ZM14.6562 6.75757L11.4141 10L14.6562 13.2427L13.2422 14.657L10 11.4143L6.75684 14.657L5.34277 13.2427L8.58496 10L5.34277 6.75757L6.75684 5.34326L10 8.58594L13.2422 5.34326L14.6562 6.75757Z" fill="#EF0505"/>
+                                        | </svg>
+                                    | Сотрудник является учредителем компании, оказывающей аналогичные услуги
+                                li
+                                    span.icon
+                                        | <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        |   <rect width="20" height="20" fill="black" fill-opacity="0"/>
+                                        |   <rect width="20" height="20" fill="black" fill-opacity="0"/>
+                                        |   <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20Z" fill="#E8EC26"/>
+                                        |   <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5H9V11H11V5ZM11 13H9V15H11V13Z" fill="#222222"/>
+                                        | </svg>
+                                    | Ряд платежей совершён быстрее, чем принято в компании
+                .cards__item
+                    .columns
+                        .column.is-4
+                            h3.is-size-3 Клиент #3
+                        .column.is-8
+                            .columns
+                                .column
+                                    | 3000
+                                    span контрагентов
+                                .column
+                                    | 3000
+                                    span контрагентов
+                                .column
+                                    | 3000
+                                    span контрагентов
+                            ul.is-list-icon
+                                li
+                                    span.icon
+                                        |<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        |   <rect width="20" height="20" fill="black" fill-opacity="0"/>
+                                        |   <path fill-rule="evenodd" clip-rule="evenodd" d="M0 10C0 15.5229 4.47754 20 10 20C15.5225 20 20 15.5229 20 10C20 4.47705 15.5225 0 10 0C4.47754 0 0 4.47705 0 10ZM14.6562 6.75757L11.4141 10L14.6562 13.2427L13.2422 14.657L10 11.4143L6.75684 14.657L5.34277 13.2427L8.58496 10L5.34277 6.75757L6.75684 5.34326L10 8.58594L13.2422 5.34326L14.6562 6.75757Z" fill="#EF0505"/>
+                                        |</svg>
+                                    | 2 случая аффилированности сотрудников с поставщиками
+                                li
+                                    span.icon
+                                        | <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        |   <rect width="20" height="20" fill="black" fill-opacity="0"/>
+                                        |   <rect width="20" height="20" fill="black" fill-opacity="0"/>
+                                        |   <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20Z" fill="#E8EC26"/>
+                                        |   <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5H9V11H11V5ZM11 13H9V15H11V13Z" fill="#222222"/>
+                                        | </svg>
+                                    | Аффилированность нескольких поставщиков между собой
+                                li
+                                    span.icon
+                                        | <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        |   <rect width="20" height="20" fill="black" fill-opacity="0"/>
+                                        |   <rect width="20" height="20" fill="black" fill-opacity="0"/>
+                                        |   <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20Z" fill="#E8EC26"/>
+                                        |   <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5H9V11H11V5ZM11 13H9V15H11V13Z" fill="#222222"/>
+                                        | </svg>
+                                    | 5 клиентов в предбанкротном состоянии
+                                li
+                                    span.icon
+                                        | <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        |   <rect width="20" height="20" fill="black" fill-opacity="0"/>
+                                        |   <rect width="20" height="20" fill="black" fill-opacity="0"/>
+                                        |   <path d="M10 20C4.47715 20 0 15.5228 0 10C0 4.47715 4.47715 0 10 0C15.5228 0 20 4.47715 20 10C20 15.5228 15.5228 20 10 20Z" fill="#E8EC26"/>
+                                        |   <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5H9V11H11V5ZM11 13H9V15H11V13Z" fill="#222222"/>
+                                        | </svg>
+                                    | 20 сотрудников, имеющих собственный бизнес
+block footer
+    footer.footer
+        .container
+            .columns.is-centered.is-gapless
+                .column.is-6
+                    .contacts.has-text-centered
+                        //.contacts__title
+                            //h2.is-size-2.has-text-white Контакты
+                        ul.contacts__list
+                            li
+                                | 127006, Россия, Москва,
+                                br
+                                |  Долгоруковская ул., д. 40, стр. 5
+                            li
+                                a(href="tel:+79451234567") +7 945 123-45-67
+                            li
+                                a(href="mailto:info@cpartners.ru") info@cpartners.ru
+                        p.has-text-centered
+                            span.is-size-7.has-text-grey-dark © Constanta, 2009–2018

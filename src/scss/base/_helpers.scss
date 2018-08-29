@@ -35,10 +35,13 @@
 }
 .is-size-2 {
   font-weight: $weight-semibold;
-  line-height: 1.285;
+  line-height: (46 / 36);
 }
 .is-size-3 {
-  line-height: 1.5394;
+  line-height: (36 / 26);
+}
+.is-size-5 {
+  line-height: (28 / 17);
 }
 @mixin typography-size($target: "") {
   @each $size in $sizes {
@@ -80,6 +83,9 @@
   @include typography-size("fullhd");
 }
 
+.is-horizontal-center {
+  justify-content: center;
+}
 
 $alignments: ("centered": "center", "justified": "justify", "left": "left", "right": "right");
 

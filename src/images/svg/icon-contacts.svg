@@ -1,0 +1,11 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="200" fill="black" fill-opacity="0"/>
+<rect width="200" height="200" fill="black" fill-opacity="0"/>
+<rect width="123.475" height="148.98" fill="black" fill-opacity="0" transform="translate(38.0815 26.1584)"/>
+<path d="M97.3758 71.6432C99.7427 66.5674 100.926 64.0295 102.818 62.5514C104.482 61.2513 106.515 60.5113 108.626 60.4376C111.025 60.3538 113.563 61.5373 118.639 63.9042L144.155 75.8028C150.246 78.643 153.292 80.0632 155.065 82.3334C156.626 84.3303 157.514 86.7699 157.602 89.3025C157.703 92.1817 156.282 95.2272 153.442 101.318L127.533 156.88C124.693 162.971 123.273 166.017 121.003 167.79C119.006 169.35 116.566 170.238 114.033 170.327C111.154 170.427 108.109 169.007 102.018 166.167L62.0002 147.506L97.3758 71.6432Z" fill="#FFA230"/>
+<g opacity="0.7">
+<rect width="68" height="132.672" fill="black" fill-opacity="0" transform="translate(94.1514 26.1584) rotate(25)"/>
+<rect x="93.8672" y="26.7678" width="68" height="132" rx="12" transform="rotate(25 93.8672 26.7678)" stroke="black" stroke-width="3.78"/>
+<path d="M64.4817 146.574L82.6083 155.026" stroke="black" stroke-width="3.78" stroke-linecap="round"/>
+</g>
+</svg>

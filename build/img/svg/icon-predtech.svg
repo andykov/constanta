@@ -1,0 +1,15 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="200" height="200" fill="black" fill-opacity="0"/>
+<rect width="200" height="200" fill="black" fill-opacity="0"/>
+<path d="M63 65.4C63 63.1598 63 62.0397 63.436 61.184C63.8195 60.4314 64.4314 59.8195 65.184 59.436C66.0397 59 67.1598 59 69.4 59H153.6C155.84 59 156.96 59 157.816 59.436C158.569 59.8195 159.181 60.4314 159.564 61.184C160 62.0397 160 63.1598 160 65.4V117.6C160 122.64 160 125.161 159.019 127.086C158.156 128.779 156.779 130.156 155.086 131.019C153.161 132 150.64 132 145.6 132H69.4C67.1598 132 66.0397 132 65.184 131.564C64.4314 131.181 63.8195 130.569 63.436 129.816C63 128.96 63 127.84 63 125.6V65.4Z" fill="#FFA230"/>
+<g opacity="0.7">
+<rect width="112" height="147.143" fill="black" fill-opacity="0" transform="translate(44 26)"/>
+<path d="M132 70V90C132 94.1591 128.16 98 124 98C119.84 98 116 94.3482 116 90V78C116 73.8409 112.16 70 108 70C103.84 70 100 73.6518 100 78V96C100 100.159 96.1603 104 92 104C87.8397 104 84 100.348 84 96V72C84 67.8409 80.1589 64 75.9986 64C71.8383 64 68 67.6518 68 72V80" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M150 50V115.774C150 118.609 148.752 122 145.727 122H55.4728C52.6362 122 50 118.799 50 115.774V50" stroke="black" stroke-width="3.78102"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M60.9824 155.677L80.4257 122.153L60.9824 155.677Z" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M117.463 122.088L136.944 155.677" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M99 122.252V173.143" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M74.0303 138L98.9997 154L124.888 138" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M125 38C125 37.6219 125 32 125 32C125 28.408 121.307 26 117.714 26H83.864C80.271 26 77 28.408 77 32C77 32 76.8109 37.6219 77 38H44V50H156V38H125Z" stroke="black" stroke-width="3.78102" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>

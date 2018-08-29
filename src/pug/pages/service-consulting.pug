@@ -1,0 +1,133 @@
+extends ../template/_main
+
+block title
+    | Consulting
+
+block content
+    section.section
+        .container.is-size-narrow
+            .hero.has-text-centered
+                +hero('icon-consulting.svg', '', 'logo-consulting.svg')
+
+    section.section
+        .container.is-size-narrow
+            .intro
+                p Мы оказываем консультационные услуги ведущим технологическим компаниям России и СНГ по вопросам стратегического развития, вывода на рынок новых продуктов, повышения эффективности операционной деятельности и управления. Глубокое понимание рыночной конъюнктуры и отраслевого опыта, оптимальных продуктовых решений и доступ к лучшим экспертам в секторе – всё это позволяет нам решать самые сложные проблемы из тех, с которыми сталкиваются наши клиенты.
+
+    section.section
+        .container
+            h2.is-size-2.has-text-centered Примеры кейсов
+            .cards.is-border-top
+                .columns.is-multiline.is-gapless
+                    .column.is-6
+                        .cards__item
+                            .menu
+                                .menu__label
+                                    h3.is-size-3 Стратегия
+                                ul.menu__list
+                                    li.menu__item
+                                        a(href="/").menu__link Продуктовая и инновационная стратегия
+                                    li.menu__item
+                                        a(href="/").menu__link Технологическая стратегия GTM стратегия
+                                    li.menu__item
+                                        a(href="/").menu__link Стратегия развития каналов обслуживания
+                                    li.menu__item
+                                        a(href="/").menu__link M&A стратегия
+                                    li.menu__item
+                                        a(href="/").menu__link Корпоративная стратегия
+                                    li.menu__item
+                                        a(href="/").menu__link Стратегия развития каналов продаж
+                                    li.menu__item
+                                        a(href="/").menu__link Цифровая стратегия
+                    .column.is-6
+                        .cards__item
+                            .menu
+                                .menu__label
+                                    h3.is-size-3 Операционная  эффективность
+                                ul.menu__list
+                                    li.menu__item
+                                        a(href="/").menu__link Повышение операционной эффективности
+                                    li.menu__item
+                                        a(href="/").menu__link Оптимизация затрат, бенчмаркинг
+                                    li.menu__item
+                                        a(href="/").menu__link Бережливое производство
+                                    li.menu__item
+                                        a(href="/").menu__link Управление изменениями (change management)
+                                    li.menu__item
+                                        a(href="/").menu__link Борьба с оттоком и развитие клиентской базы
+                                    li.menu__item
+                                        a(href="/").menu__link AVA анализ, хронометраж
+                                    li.menu__item
+                                        a(href="/").menu__link Outsourcing и «уберизация»
+                                    li.menu__item
+                                        a(href="/").menu__link Дебюрократизация, agile-процессы
+                    .column.is-6
+                        .cards__item
+                            .menu
+                                .menu__label
+                                    h3.is-size-3 Финансовая эффективность и прозрачность
+                                ul.menu__list
+                                    li.menu__item
+                                        a(href="/").menu__link Построение систем финансовой отчетности и бюджетных моделей
+                                    li.menu__item
+                                        a(href="/").menu__link Внедрение юридически значимого документооборота
+                                    li.menu__item
+                                        a(href="/").menu__link Forensic-процедуры
+                                    li.menu__item
+                                        a(href="/").menu__link Системы управленческой отчетности, dash boards
+                                    li.menu__item
+                                        a(href="/").menu__link Внедрение систем мониторинга и скоринга контрагентов
+                                    li.menu__item
+                                        a(href="/").menu__link Гарантирование доходов
+                                    li.menu__item
+                                        a(href="/").menu__link Построение систем внутреннего контроля
+                                    li.menu__item
+                                        a(href="/").menu__link Специализированные мероприятия (agreed upon procedures)
+                    .column.is-6
+                        .cards__item
+                            .menu
+                                .menu__label
+                                    h3.is-size-3 Mergers & Acquisitions,  интеграция  и выделение активов
+                                ul.menu__list
+                                    li.menu__item
+                                        a(href="/").menu__link Сопровождение сделок (sell/buyide)
+
+                                    li.menu__item
+                                        a(href="/").menu__link Транзакционная поддержка
+
+                                    li.menu__item
+                                        a(href="/").menu__link Выделение непрофильных активов
+
+                                    li.menu__item
+                                        a(href="/").menu__link Реструктуризация бизнеса
+
+                                    li.menu__item
+                                        a(href="/").menu__link Консолидация активов
+
+                                    li.menu__item
+                                        a(href="/").menu__link Оценка инвестиционной привлекательности активов
+
+                                    li.menu__item
+                                        a(href="/").menu__link Интеграция приобретенных компаний
+
+                                    li.menu__item
+                                        a(href="/").menu__link Создание СП
+block footer
+    footer.footer
+        .container
+            .columns.is-centered.is-gapless
+                .column.is-6
+                    .contacts.has-text-centered
+                        //.contacts__title
+                            //h2.is-size-2.has-text-white Контакты
+                        ul.contacts__list
+                            li
+                                | 127006, Россия, Москва,
+                                br
+                                |  Долгоруковская ул., д. 40, стр. 5
+                            li
+                                a(href="tel:+79451234567") +7 945 123-45-67
+                            li
+                                a(href="mailto:info@cpartners.ru") info@cpartners.ru
+                        p.has-text-centered
+                            span.is-size-7.has-text-grey-dark © Constanta, 2009–2018

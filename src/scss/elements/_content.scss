@@ -21,7 +21,7 @@ $content-table-foot-cell-color: $text-strong !default;
   @include block;
   // Inline
   li + li {
-    margin-top: 0.25em;
+    margin-top: 1.15em;
   }
   // Block
   p,
@@ -53,7 +53,8 @@ $content-table-foot-cell-color: $text-strong !default;
     }
   }
   h2 {
-    margin-bottom: 0.806em;
+    margin-bottom: 1.389em;
+    //margin-bottom: 0.806em;
     //font-weight: $weight-semibold;
 
     &:not(:first-child) {
@@ -89,9 +90,57 @@ $content-table-foot-cell-color: $text-strong !default;
     margin-top: 1em;
   }
   ul {
-    list-style: disc outside;
-    margin-left: 2em;
+    list-style: none;
+    //margin-left: 2em;
     margin-top: 1em;
+
+    li {
+      position: relative;
+    }
+
+    &.is-marker-orange,
+    &.is-marker-gray {
+      li {
+        padding-left: 54px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 0.667em;
+          height: 0.500em;
+          left: 0;
+          top: 14px;
+        }
+      }
+    }
+
+    &.is-marker-orange {
+      li {
+        &::before {
+          background-color: #FF5200;
+        }
+      }
+    }
+
+    &.is-marker-gray {
+      li {
+        &::before {
+          background-color: rgba(0,0,0,0.2);
+        }
+      }
+    }
+
+    &.is-list-icon {
+      li {
+        padding-left: 45px;
+        .icon {
+          position: absolute;
+          left: 0;
+          top: 3px;
+        }
+      }
+    }
+
     ul {
       list-style-type: circle;
       margin-top: 0.5em;
@@ -104,8 +153,6 @@ $content-table-foot-cell-color: $text-strong !default;
     margin-left: 2em;
   }
   figure {
-    margin-left: 2em;
-    margin-right: 2em;
     text-align: center;
     &:not(:first-child) {
       margin-top: 2em;

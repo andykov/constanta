@@ -1,0 +1,66 @@
+extends ../template/_main
+
+block title
+    | Career
+
+block content
+    section.section
+        .container.is-size-narrow
+            .hero.has-text-centered
+                +hero('icon-consulting.svg', 'Карьера')
+    section.section
+        .intro
+            .container
+                figure.image
+                    img(src="img/career-photo.jpg")
+            .container.is-size-narrow
+                p Наши люди — наш самый ценный актив.
+                p У нас работают талантливые и увлеченные своим делом консультанты, инвестиционные менеджеры, отраслевые эксперты и разработчики. Они обладают всеми необходимыми знаниями и опытом для решения самых интересных и сложных задач на стыке бизнеса и технологий, реализуя проекты в интересах крупнейших компаний сектора.
+
+    section.section
+        .container
+            h2.is-size-2.has-text-centered Открытые вакансии
+            .cards.is-border-top.is-gapless
+                .cards__item
+                    .menu
+                        a(href="/").menu__link Продуктовая и инновационная стратегия
+                .cards__item
+                    .menu
+                        a(href="/").menu__link Технологическая стратегия GTM стратегия
+                .cards__item
+                    .menu
+                        a(href="/").menu__link Стратегия развития каналов обслуживания
+                .cards__item
+                    .menu
+                        a(href="/").menu__link M&A стратегия
+                .cards__item
+                    .menu
+                        a(href="/").menu__link Корпоративная стратегия
+                .cards__item
+                    .menu
+                        a(href="/").menu__link Стратегия развития каналов продаж
+                .cards__item
+                    .menu
+                        a(href="/").menu__link Цифровая стратегия
+
+block footer
+    footer.footer
+        .container
+            .columns.is-centered.is-gapless
+                .column.is-6
+                    .contacts.has-text-centered
+                        //.contacts__title
+                            //h2.is-size-2.has-text-white Контакты
+                        ul.contacts__list
+                            li
+                                | 127006, Россия, Москва,
+                                br
+                                |  Долгоруковская ул., д. 40, стр. 5
+                            li
+                                a(href="tel:+79451234567") +7 945 123-45-67
+                            li
+                                a(href="mailto:info@cpartners.ru") info@cpartners.ru
+                        p.has-text-centered
+                            span.is-size-7.has-text-grey-dark © Constanta, 2009–2018
+
+
