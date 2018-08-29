@@ -6,14 +6,14 @@ mixin headerNav(url,text)
 .nav
   .container
     .nav__brand
-      a.nav__item
+      a(href="/").nav__item
         img(src='img/svg/logo.svg')
     nav.nav__list
       .nav__end
-        a(href='').nav__item Услуги
-        a(href='').nav__item Клиенты
-        a(href='').nav__item Карьера
-        a(href='').nav__item Контакты
+        a(href='services.html').nav__item Услуги
+        a(href='#').nav__item Клиенты
+        a(href='career.html').nav__item Карьера
+        a(href='contacts.html').nav__item Контакты
         .lang
-          a(href='').lang__item= 'ru'
-          a(href='').lang__item= 'en'
+          a(href='#').lang__item= 'ru'
+          a(href='#').lang__item= 'en'
