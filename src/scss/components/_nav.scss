@@ -292,7 +292,7 @@ a.nav__item {
 //  margin: 0.5rem 0;
 //}
 
-@include touch {
+@include mobile {
   .nav > .container {
     display: block;
   }
@@ -351,7 +351,7 @@ a.nav__item {
 }
 
 
-@include desktop {
+@include tablet {
   .nav,
   .nav__list,
   .nav__start,
@@ -565,7 +565,7 @@ a.nav__item {
 
   &__item {
 
-    @include desktop {
+    @include tablet {
       display: flex;
       align-items: center;
       justify-content: center;

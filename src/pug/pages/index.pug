@@ -145,15 +145,18 @@ block content
         .column.is-5
           .contacts.has-background-danger
             h2.is-size-2.has-text-white Контакты
-            p
-              | 127006, Россия, Москва,
-              br
-              |  Долгоруковская ул.,
-              br
-              |  д. 40, стр. 5
-            p +7 945 123-45-67
-            p
-              a(href="mailto:info@cpartners.ru") info@cpartners.ru
+            ul.contacts__list
+              li
+                span
+                  | 127006, Россия, Москва,
+                  br
+                  |  Долгоруковская ул.,
+                  br
+                  |  д. 40, стр. 5
+              li
+                a(href="tel:+79451234567") +7 945 123-45-67
+              li
+                a(href="mailto:info@cpartners.ru") info@cpartners.ru
 
         .column.is-7
           .map

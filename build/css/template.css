@@ -2462,7 +2462,7 @@ a.nav__item {
   .nav__item img {
     max-height: 1.75rem; }
 
-@media screen and (max-width: 1087px) {
+@media screen and (max-width: 768px) {
   .nav > .container {
     display: block; }
   .nav__brand .nav__item {
@@ -2498,7 +2498,7 @@ a.nav__item {
   body.has-nav-fixed-bottom-touch {
     padding-bottom: 1.11111rem; } }
 
-@media screen and (min-width: 1088px) {
+@media screen and (min-width: 769px), print {
   .nav,
   .nav__list,
   .nav__start,
@@ -2618,7 +2618,7 @@ a.nav__item {
     font-weight: 600;
     color: #4a4a4a;
     padding: 0.195rem 0; }
-    @media screen and (min-width: 1088px) {
+    @media screen and (min-width: 769px), print {
       .lang__item {
         display: -webkit-box;
         display: -webkit-flex;
@@ -2636,18 +2636,29 @@ a.nav__item {
 .contacts {
   background-color: #FF5200;
   color: #fff;
-  padding: 45px 50px; }
+  padding: 45px 50px;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
   .contacts__list {
+    margin-top: auto;
     margin-left: -50px;
     margin-right: -50px;
     margin-bottom: 10px;
     font-weight: 600; }
-    .contacts__list a {
+    .contacts__list a, .contacts__list span {
       display: block;
       padding: 16px 50px;
       color: #fff; }
-      .contacts__list a:hover {
-        background-color: rgba(0, 0, 0, 0.08); }
+    .contacts__list a:hover {
+      background-color: rgba(0, 0, 0, 0.08); }
 
 .map-wide {
   padding-top: 139px;
