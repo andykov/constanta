@@ -2660,6 +2660,13 @@ a.nav__item {
     .contacts__list a:hover {
       background-color: rgba(0, 0, 0, 0.08); }
 
+.map {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  display: block;
+  height: 100%; }
+
 .map-wide {
   padding-top: 139px;
   margin-bottom: -198px;

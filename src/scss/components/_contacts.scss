@@ -28,6 +28,13 @@
   }
 }
 
+.map {
+  object-fit: cover;
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+
 .map-wide {
   padding-top: 139px;
   margin-bottom: -198px;
