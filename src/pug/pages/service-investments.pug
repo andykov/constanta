@@ -1,0 +1,127 @@
+extends ../template/_main
+
+block title
+    | Career
+
+block content
+    section.section
+        .container.is-size-narrow
+            .hero.has-text-centered
+                +hero('icon-investments.svg', '', 'logo-center-investments.svg')
+    section.section
+        .intro
+            .container.is-size-narrow
+                p Суммарный объем сделок, в рамках которых Constanta выступала эксклюзивным советником продавцов активов составляет более 300 млн долларов. Суммарный объем сделок, в которых Constanta принимала участие в качестве советника или консультанта одной из сторон составляет около 10 млрд долларов.
+                p Глубокое понимание сектора, истории его ключевых сделок, опыта развития поглощенных активов, успехов и неудач в реализации заявленных целей сделок – все это необходимые элементы для выбора и оценки объектов для инвестиций. Constanta имеет уникальный опыт и экспертизу, постоянно выступая советником крупнейших инвестиционных фондов, специализирующихся на секторе ТМТ, а также всех ключевых стратегических инвесторов.
+
+    section.section
+        .container
+            h2.is-size-2.has-text-centered Что мы предлагаем?
+            .cards.is-border-top.is-gapless
+                .cards__item
+                    .menu.is-size-3
+                        a(href="/").menu__link Инвестиции собственных средств
+                .cards__item
+                    .menu.is-size-3
+                        a(href="/").menu__link Привлечение финансовых и стратегических инвесторов
+                .cards__item
+                    .menu.is-size-3
+                        a(href="/").menu__link Помощь в формировании востребованного рынком продуктового предложения
+                .cards__item
+                    .menu.is-size-3
+                        a(href="/").menu__link Привлечение партнера для реализации коммерческого потенциала проекта, помощь в B2B продажах
+                .cards__item
+                    .menu.is-size-3
+                        a(href="/").menu__link Сопровождение due diligence и реализации сделки
+                .cards__item
+                    .menu.is-size-3
+                        a(href="/").menu__link Продажа актива
+            h3.is-size-3.has-text-grey.has-text-centered  Инвестиционный фокус
+
+            .buttons.is-centered
+                a(href="#").button.is-rounded.is-primary.is-outlined Аутсорсинг и «уберизация» в B2B
+                a(href="#").button.is-rounded.is-primary.is-outlined Промышленный интернет вещей
+                a(href="#").button.is-rounded.is-primary.is-outlined Телеком
+                a(href="#").button.is-rounded.is-primary.is-outlined ФинТех, ЛегалТех, Медтех
+                a(href="#").button.is-rounded.is-primary.is-outlined Киберспорт
+                a(href="#").button.is-rounded.is-primary.is-outlined Стадии проектов: Раунд А, B, Exit
+
+            .is-divider
+
+            h2.is-size-2.has-text-centered Примеры инвестиционных проектов
+
+            .tiles
+                .tiles__item
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-mts.svg" width="309px" height="140px")
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-mts.svg" width="309px" height="140px")
+                .tiles__item
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-rostelecom.svg" width="309px" height="140px")
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-rostelecom.svg" width="309px" height="140px")
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-rostelecom.svg" width="309px" height="140px")
+                .tiles__item
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-beeline.svg" width="309px" height="140px")
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-beeline.svg" width="309px" height="140px")
+                .tiles__item
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-pepsico.svg" width="309px" height="140px")
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-pepsico.svg" width="309px" height="140px")
+                .tiles__item
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-alfabank.svg" width="309px" height="140px")
+                .tiles__item
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-euroset.svg" width="309px" height="140px")
+                .tiles__item
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-norilsk.svg" width="309px" height="140px")
+                .tiles__item
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-rosneft.svg" width="309px" height="140px")
+                .tiles__item
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-vgtrk.svg" width="309px" height="140px")
+                .tiles__item
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-baring.svg" width="309px" height="140px")
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-baring.svg" width="309px" height="140px")
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-baring.svg" width="309px" height="140px")
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-baring.svg" width="309px" height="140px")
+                .tiles__item
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-o1.svg" width="309px" height="140px")
+                .tiles__item
+                    figure.image
+                        img(src="img/svg/clients-logo/logo-capman.svg" width="309px" height="140px")
+
+block footer
+    footer.footer
+        .container
+            .columns.is-centered.is-gapless
+                .column.is-6
+                    .contacts.has-text-centered
+                        //.contacts__title
+                            //h2.is-size-2.has-text-white Контакты
+                        ul.contacts__list
+                            li
+                                | 127006, Россия, Москва,
+                                br
+                                |  Долгоруковская ул., д. 40, стр. 5
+                            li
+                                a(href="tel:+79451234567") +7 945 123-45-67
+                            li
+                                a(href="mailto:info@cpartners.ru") info@cpartners.ru
+                        p.has-text-centered
+                            span.is-size-7.has-text-grey-dark © Constanta, 2009–2018
+
+

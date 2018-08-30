@@ -82,10 +82,12 @@ $dimensions: 16 24 32 48 64 96 128 !default;
   //}
   &.is-grayscale {
     filter: grayscale(1);
-    transition: filter 0.3s;
+    opacity: 0.5;
+    transition: all 0.2s;
 
     &:hover {
       filter: grayscale(0);
+      opacity: 1;
     }
   }
   // Sizes

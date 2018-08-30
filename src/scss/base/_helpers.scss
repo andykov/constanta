@@ -24,6 +24,19 @@
   @include overlay;
 }
 
+.is-divider {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    background-color: rgba(0,0,0, 0.35);
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+}
+
 // Typography
 .is-extra-size-1 {
   font-size: 4.444444444444445rem;

@@ -1,44 +1,49 @@
-.tile {
-  align-items: stretch;
-  display: block;
-  flex-basis: 0;
-  flex-grow: 1;
-  flex-shrink: 1;
-  min-height: min-content;
-  // Modifiers
-  &.is-ancestor {
-    margin-left: -0.75rem;
-    margin-right: -0.75rem;
-    margin-top: -0.75rem;
-    &:last-child {
-      margin-bottom: -0.75rem;
-    }
-    &:not(:last-child) {
-      margin-bottom: 0.75rem;
-    }
+.tiles { /* Masonry container */
+  -webkit-column-count: 4;
+  -moz-column-count:4;
+  column-count: 4;
+  -webkit-column-gap: 0.44444rem;
+  -moz-column-gap: 0.44444rem;
+  column-gap: 0.44444rem;
+  padding: 0;
+  -moz-column-gap: 0.88888rem;
+  -webkit-column-gap: 0.88888rem;
+  column-gap: 0.88888rem;
+  font-size: .85em;
+
+}
+.tiles__item {
+  display: inline-block;
+  background: #fff;
+  padding: 1em;
+  margin: 0 0 0.88888rem;
+  width: 100%;
+  -webkit-transition:1s ease all;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-shadow: 0 5px 32px 0 rgba(0, 0, 0, 0.07);
+}
+.tiles__item img{max-width:100%;}
+
+@media only screen and (max-width: 320px) {
+  .tiles {
+    column-count: 1;
   }
-  &.is-child {
-    margin: 0 !important;
+}
+
+@media only screen and (min-width: 321px) and (max-width: 768px){
+  .tiles {
+    column-count: 1;
   }
-  &.is-parent {
-    padding: 0.75rem;
+}
+@media only screen and (min-width: 769px) and (max-width: 1200px){
+  .tiles {
+    column-count: 2;
   }
-  &.is-vertical {
-    flex-direction: column;
-    & > .tile.is-child:not(:last-child) {
-      margin-bottom: 1.5rem !important;
-    }
-  }
-  // Responsiveness
-  @include tablet {
-    &:not(.is-child) {
-      display: flex;
-    }
-    @for $i from 1 through 12 {
-      &.is-#{$i} {
-        flex: none;
-        width: $i / 12 * 100%;
-      }
-    }
+}
+@include tablet {
+  .tiles {
+    column-count: 3;
   }
 }
