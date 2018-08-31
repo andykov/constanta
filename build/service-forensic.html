@@ -13,11 +13,10 @@
     <div class="nav">
       <div class="container">
         <div class="nav__brand"><a class="nav__item" href="/"><img src="img/svg/logo.svg"></a></div>
-        <nav class="nav__list">
-          <div class="nav__end"><a class="nav__item" href="services.html">Услуги</a><a class="nav__item" href="clients.html">Клиенты</a><a class="nav__item" href="career.html">Карьера</a><a class="nav__item" href="contacts.html">Контакты</a>
-            <div class="lang"><a class="lang__item" href="#">ru</a><a class="lang__item" href="#">en</a></div>
-          </div>
+        <nav class="nav__list"><a class="nav__item" href="services.html">Услуги</a><a class="nav__item" href="clients.html">Клиенты</a><a class="nav__item" href="career.html">Карьера</a><a class="nav__item" href="contacts.html">Контакты</a>
+          <div class="lang"><a class="lang__item is-active" href="#">ru</a><a class="lang__item" href="#">en</a></div>
         </nav>
+        <button class="nav__burger"><span></span><span></span><span></span></button>
       </div>
     </div>
     <main class="content">
@@ -178,7 +177,15 @@
         </div>
       </div>
     </footer>
-    <script src="../js/libs.js"></script>
-    <script src="../js/template.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>
+      var $menu = $(".nav"),
+          $links = $menu.find("nav__burger"); // кэшируем в переменную ссылки
+      
+      $links.on("click", function () {
+          $menu.children().children().removeClass("is-active"); // убираем класс у всех пунктов
+          $(this).parent().parent().addClass("is-active"); // добавляем к пункту, содержащему нажатую ссылку
+      });
+    </script>
   </body>
 </html>

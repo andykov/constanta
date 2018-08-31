@@ -13,18 +13,17 @@
     <div class="nav">
       <div class="container">
         <div class="nav__brand"><a class="nav__item" href="/"><img src="img/svg/logo.svg"></a></div>
-        <nav class="nav__list">
-          <div class="nav__end"><a class="nav__item" href="services.html">Услуги</a><a class="nav__item" href="clients.html">Клиенты</a><a class="nav__item" href="career.html">Карьера</a><a class="nav__item" href="contacts.html">Контакты</a>
-            <div class="lang"><a class="lang__item" href="#">ru</a><a class="lang__item" href="#">en</a></div>
-          </div>
+        <nav class="nav__list"><a class="nav__item" href="services.html">Услуги</a><a class="nav__item" href="clients.html">Клиенты</a><a class="nav__item" href="career.html">Карьера</a><a class="nav__item" href="contacts.html">Контакты</a>
+          <div class="lang"><a class="lang__item is-active" href="#">ru</a><a class="lang__item" href="#">en</a></div>
         </nav>
+        <button class="nav__burger"><span></span><span></span><span></span></button>
       </div>
     </div>
     <main class="content">
       <section class="section">
         <div class="container is-size-wide">
           <div class="hero">
-            <div class="columns">
+            <div class="columns is-vcentered has-text-centered-mobile">
               <div class="column">
                 <h1 class="is-size-1">Ведущий независимый консультант</h1>
                 <div class="is-size-3">и инвестиционный партнер на рынках Technology Media Telecom России и стран СНГ</div>
@@ -79,7 +78,7 @@
         <div class="container">
           <div class="has-text-centered">
             <h2 class="is-size-2">Услуги и направления</h2>
-            <p class="is-size-3 has-text-grey">Мы помогаем нашим клиентам в решении самых сложных задач, предоставляя лучшую в секторе экспертизу</p>
+            <h3 class="is-size-3 has-text-grey">Мы помогаем нашим клиентам в решении самых сложных задач, предоставляя лучшую в секторе экспертизу</h3>
           </div>
           <div class="columns is-multiline">
             <div class="column is-6"><a class="box is-arrow" href="service-consulting.html">
@@ -180,7 +179,15 @@
         </div>
       </div>
     </footer>
-    <script src="../js/libs.js"></script>
-    <script src="../js/template.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script>
+      var $menu = $(".nav"),
+          $links = $menu.find("nav__burger"); // кэшируем в переменную ссылки
+      
+      $links.on("click", function () {
+          $menu.children().children().removeClass("is-active"); // убираем класс у всех пунктов
+          $(this).parent().parent().addClass("is-active"); // добавляем к пункту, содержащему нажатую ссылку
+      });
+    </script>
   </body>
 </html>
