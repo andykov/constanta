@@ -2374,6 +2374,7 @@ a.tag:hover {
           -ms-flex-pack: center;
               justify-content: center; } }
   .nav.is-show-mobile .nav__burger {
+    display: block;
     position: fixed;
     top: 20px;
     right: 20px;
@@ -2400,7 +2401,7 @@ a.tag:hover {
     color: #4b5c91;
     display: block;
     line-height: 1;
-    padding: 0.195rem 0.8490rem;
+    padding: 0.3615rem 0.8490rem;
     position: relative; }
     .nav__item .icon:only-child {
       margin-left: -0.25rem;
@@ -2420,11 +2421,13 @@ a.tag:hover {
   padding: 0;
   color: #4a4a4a;
   cursor: pointer;
-  display: block;
   height: 1.7777777777777777rem;
   position: relative;
   width: 1.7777777777777777rem;
   margin-left: auto; }
+  @media screen and (min-width: 769px), print {
+    .nav__burger {
+      display: none; } }
 
 .nav__burger span {
   background-color: currentColor;
@@ -2439,11 +2442,11 @@ a.tag:hover {
   -webkit-transition-duration: 86ms;
        -o-transition-duration: 86ms;
           transition-duration: 86ms;
-  transition-property: background-color,opacity,-webkit-transform;
-  -webkit-transition-property: background-color,opacity,-webkit-transform;
-  -o-transition-property: background-color,opacity,transform;
-  transition-property: background-color,opacity,transform;
-  transition-property: background-color,opacity,transform,-webkit-transform;
+  transition-property: background-color, opacity, -webkit-transform;
+  -webkit-transition-property: background-color, opacity, -webkit-transform;
+  -o-transition-property: background-color, opacity, transform;
+  transition-property: background-color, opacity, transform;
+  transition-property: background-color, opacity, transform, -webkit-transform;
   -webkit-transition-timing-function: ease-out;
        -o-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
@@ -2476,6 +2479,26 @@ a.tag:hover {
   -webkit-transform: translateY(-5px) rotate(-45deg);
   -ms-transform: translateY(-5px) rotate(-45deg);
       transform: translateY(-5px) rotate(-45deg); }
+
+.lang {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .lang__item {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: rgba(0, 0, 0, 0.45);
+    width: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    padding-top: 0.3615rem;
+    padding-bottom: 0.3615rem; }
+    .lang__item.is-active {
+      background-color: #FF5200;
+      color: #fff; }
 
 .contacts {
   background-color: #FF5200;
