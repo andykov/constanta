@@ -38,24 +38,6 @@
 }
 
 // Typography
-.is-extra-size-1 {
-  font-size: 4.444444444444445rem;
-  line-height: 1.5;
-}
-.is-size-1 {
-  font-weight: $weight-bold;
-  line-height: 1.185;
-}
-.is-size-2 {
-  font-weight: $weight-semibold;
-  line-height: (46 / 36);
-}
-.is-size-3 {
-  line-height: (36 / 26);
-}
-.is-size-5 {
-  line-height: (28 / 17);
-}
 @mixin typography-size($target: "") {
   @each $size in $sizes {
     $i: index($sizes, $size);
@@ -95,7 +77,28 @@
 @include fullhd {
   @include typography-size("fullhd");
 }
+.is-extra-size-1 {
+  font-size: 4.444444444444445rem;
+  line-height: 1.5;
+}
+.is-size-1 {
+  font-weight: $weight-bold;
+  line-height: 1.185;
 
+  @include mobile {
+    font-size: 32px !important;
+  }
+}
+.is-size-2 {
+  font-weight: $weight-semibold;
+  line-height: (46 / 36);
+}
+.is-size-3 {
+  line-height: (36 / 26);
+}
+.is-size-5 {
+  line-height: (28 / 17);
+}
 .is-horizontal-center {
   justify-content: center;
 }

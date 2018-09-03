@@ -64,12 +64,15 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script>
-      var $menu = $(".nav"),
-          $links = $menu.find("nav__burger"); // кэшируем в переменную ссылки
+      $(document).ready(function () {
+          console.log('ready');
+          var $nav = $(".nav"),
+              $burger = $nav.find(".nav__burger");
       
-      $links.on("click", function () {
-          $menu.children().children().removeClass("is-active"); // убираем класс у всех пунктов
-          $(this).parent().parent().addClass("is-active"); // добавляем к пункту, содержащему нажатую ссылку
+          $burger.on("click", function () {
+              $nav.toggleClass("is-show-mobile");
+              $burger.toggleClass("is-active");
+          });
       });
     </script>
   </body>

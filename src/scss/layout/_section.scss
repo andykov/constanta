@@ -1,10 +1,15 @@
-$section-padding: 3.111em 1.5rem !default;
+$section-padding-mobile: 2.214em 1.4285714285714286rem !default;
+$section-padding: 3.111em 1.4285714285714286rem !default;
+
 $section-padding-medium: 9rem 1.5rem !default;
 $section-padding-large: 18rem 1.5rem !default;
 
 .section {
   padding: $section-padding;
   // Responsiveness
+  @include mobile {
+    padding: $section-padding-mobile;
+  }
   @include desktop {
     // Sizes
     &.is-medium {

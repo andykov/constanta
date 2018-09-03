@@ -58,10 +58,35 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
   position: relative;
   z-index: $navbar-z;
 
-  @include tablet {
+  //@include tablet {
     > .container {
       display: flex;
       align-items: center;
+    }
+  //}
+
+  &.is-show-mobile {
+    .nav__list {
+      @include mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        text-align: center;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .nav__burger {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 2;
     }
   }
 
@@ -71,10 +96,6 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
 
   &__list {
     display: none;
-
-    &.is-active {
-      display: block;
-    }
 
     @include tablet {
       display: flex;
@@ -101,6 +122,13 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
     &:hover,
     &.is-active {
       color: $orange;
+    }
+
+    @include mobile {
+      display: block;
+      font-size: 1.1111111111111112rem;
+      padding-top: 1.3895rem;
+      padding-bottom: 1.3895rem;
     }
   }
 }

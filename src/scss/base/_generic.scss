@@ -1,4 +1,5 @@
 $body-background-color: $white !default;
+$body-size-mobile: 14px !default;
 $body-size: 18px !default;
 $body-rendering: optimizeLegibility !default;
 $body-family: $family-primary !default;
@@ -28,6 +29,10 @@ html {
   overflow-y: scroll;
   text-rendering: $body-rendering;
   text-size-adjust: 100%;
+
+  @include mobile {
+    font-size: $body-size-mobile;
+  }
 }
 
 article,
