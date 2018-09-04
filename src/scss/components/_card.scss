@@ -15,6 +15,11 @@
 .cards {
   box-shadow: 0 5px 32px 0 rgba(0,0,0,0.07);
 
+  @include mobile {
+    margin-left: -1.42857rem;
+    margin-right: -1.42857rem;
+  }
+
   &.is-border-top {
     border-top: 5px solid #FF8C00;
   }
@@ -68,6 +73,11 @@
 
     a {
       padding: 0.975em 2.941em;
+
+      @include mobile {
+        padding-left: 1.42857rem;
+        padding-right: 1.42857rem;
+      }
     }
   }
 }
