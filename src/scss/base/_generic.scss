@@ -102,6 +102,16 @@ img {
   max-width: 100%;
 }
 
+svg {
+  max-height: 100%;
+  max-width: 100%;
+  display: inline-block;
+  font-size: inherit;
+  //height: 1em;
+  overflow: visible;
+  vertical-align: -.125em;
+}
+
 input[type="checkbox"],
 input[type="radio"] {
   vertical-align: baseline;

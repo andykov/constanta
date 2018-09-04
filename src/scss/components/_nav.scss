@@ -52,7 +52,7 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
 
 .nav {
   background-color: $navbar-background-color;
-  padding: 0.9722222222222222rem 1.5rem;
+  padding: 0.889rem 1.5rem;
   min-height: $navbar-height;
   margin-top: 15px;
   position: relative;
@@ -92,7 +92,12 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
   }
 
   &__brand {
-
+    a {
+      display: block;
+      img {
+        vertical-align: middle;
+      }
+    }
   }
 
   &__list {
@@ -111,7 +116,7 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
     color: $navbar-item-color;
     display: block;
     line-height: 1;
-    padding: 0.3615rem 0.8490rem;
+    padding: 0.3915rem 0.8490rem 0.3315rem;
     position: relative;
     .icon {
       &:only-child {
@@ -216,8 +221,8 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
     font-weight: $weight-semibold;
     font-size: 12px;
     line-height: 16px;
-    padding-top: 0.3615rem;
-    padding-bottom: 0.3615rem;
+    padding-top: 0.3915rem;
+    padding-bottom: 0.3315rem;
 
     &.is-active {
       background-color: #FF5200;
