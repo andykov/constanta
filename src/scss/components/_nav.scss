@@ -131,6 +131,10 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
       padding-top: 1.3895rem;
       padding-bottom: 1.3895rem;
     }
+
+    @include tablet {
+      margin-right: 20px;
+    }
   }
 }
 
@@ -198,6 +202,10 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
 
 .lang {
   display: flex;
+
+  @include tablet {
+    margin-left: 18px;
+  }
 
   &__item {
     background-color: rgba(0,0,0,0.05);

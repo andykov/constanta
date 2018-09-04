@@ -3,4 +3,16 @@ $footer-background-color: $white-bis !default;
 .footer {
   //background-color: $footer-background-color;
   padding: 3.111em 1.5rem 0;
+
+  .map {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__copyright {
+    font-size: $size-7;
+    padding: 41px 0;
+    text-align: center;
+  }
 }
