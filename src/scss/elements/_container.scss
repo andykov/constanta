@@ -2,6 +2,10 @@
   margin: 0 auto;
   //position: relative;
 
+  &.is-fullhd {
+    max-width: none;
+    width: 100%;
+  }
 
   @include desktop {
     max-width: $desktop - 2 * $gap;
@@ -29,10 +33,10 @@
   }
 
   @include until-fullhd {
-    &.is-fullhd {
-      max-width: $fullhd - 2 * $gap;
-      width: auto;
-    }
+    //&.is-fullhd {
+    //  max-width: $fullhd - 2 * $gap;
+    //  width: auto;
+    //}
   }
 
   @include widescreen {
@@ -41,7 +45,7 @@
   }
 
   @include fullhd {
-    max-width: $fullhd - 2 * $gap;
-    width: $fullhd - 2 * $gap;
+    //max-width: $fullhd - 2 * $gap;
+    //width: $fullhd - 2 * $gap;
   }
 }

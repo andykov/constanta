@@ -15,3 +15,233 @@
 //@import "panel.scss";
 @import "contacts.scss";
 //@import "tabs.scss";
+
+
+.slider-people {
+  //box-shadow: inset 0 -110px 400px 0 #fff;
+  //padding-left: 170px;
+  //padding-right: 170px;
+  //height: 250px;
+  //line-height: 250px;
+  overflow: hidden;
+  //padding-left: 3.525%;
+  //padding-right: 3.525%;
+
+  margin-left: -1.42857rem;
+  margin-right: -1.42857rem;
+
+  &__list {
+    //display: flex;
+    //align-items: flex-end;
+    //justify-content: center;
+
+    list-style: none;
+    margin: 0 !important;
+    padding: 0;
+    height: 100%;
+
+
+    li {
+      //float: left;
+      width: 350px;
+      height: 100%;
+
+      position: relative;
+
+      //margin-left: -112px;
+      //margin: 0 -56px;
+      //margin: 0 -3.525%;
+      margin-right: -124px;
+      margin-right: -7.05%;
+      text-align: center;
+
+      img {
+        max-width: 350px;
+        max-height: 570px;
+        //margin-bottom: -80px;
+      }
+
+      & > span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+      }
+
+      span {
+        display: block;
+        font-size: $size-5;
+
+        span {
+          display: none;
+        }
+      }
+
+      &:hover {
+        z-index: 1;
+
+        span {
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+.scrollbar { width: 100%; height: 47px; }
+.scrollbar .handle {
+  width: 100px;
+  height: 100%;
+  margin: 0 auto;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    height: 1px;
+    top: 50%;
+  }
+  &::before {
+    background: linear-gradient(270deg, #FF8A00 10.18%, rgba(255, 82, 0, 0.0001) 100%);
+    left: 0;
+    right: calc(50% + 23.5px);
+  }
+  &::after {
+    background: linear-gradient(-270deg, #FF8A00 10.18%, rgba(255, 82, 0, 0.0001) 100%);
+    left: calc(50% + 23.5px);
+    right: 0;
+  }
+  .mousearea {
+    width: 47px; /* overriden if dynamicHandle: 1 */
+    height: 47px;
+    background: #fff;
+    border: 1px solid #FF5200;
+    border-radius: 47px;
+    margin: 0 auto;
+  }
+}
+
+
+//background: linear-gradient(270deg, #FF8A00 10.18%, rgba(255, 82, 0, 0.0001) 100%);
+//left: 35.77%;
+//right: 50%;
+//background: linear-gradient(270deg, #FF8A00 10.18%, rgba(255, 82, 0, 0.0001) 100%);
+//left: 64.23%;
+//right: 21.55%;
+
+
+
+[data-simplebar] {
+  position: relative;
+  z-index: 0;
+  overflow: hidden!important;
+  max-height: inherit;
+  -webkit-overflow-scrolling: touch; /* Trigger native scrolling for mobile, if not supported, plugin is used. */
+}
+
+[data-simplebar="init"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.simplebar-scroll-content {
+  overflow-x: hidden!important;
+  overflow-y: scroll;
+  min-width: 100%!important;
+  max-height: inherit!important;
+  -webkit-box-sizing: content-box!important;
+  box-sizing: content-box!important;
+}
+
+.simplebar-content {
+  overflow-y: hidden!important;
+  overflow-x: scroll;
+  -webkit-box-sizing: border-box!important;
+  box-sizing: border-box!important;
+  min-height: 100%!important;
+
+  display: flex;
+  align-items: flex-end;
+}
+
+.simplebar-track {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 11px;
+}
+
+.simplebar-scrollbar {
+  position: absolute;
+  right: 2px;
+  width: 7px;
+  min-height: 10px;
+  max-width: 47px;
+
+  width: 47px; /* overriden if dynamicHandle: 1 */
+  height: 47px;
+  background: #fff;
+  border: 1px solid #FF5200;
+  border-radius: 47px;
+  margin: 0 auto;
+}
+
+.simplebar-scrollbar:before {
+  content: "";
+  //position: absolute;
+  //content: "";
+  //background: black;
+  //border-radius: 7px;
+  //left: 0;
+  //right: 0;
+  //opacity: 0;
+  //-webkit-transition: opacity 0.2s linear;
+  //transition: opacity 0.2s linear;
+
+
+}
+
+.simplebar-track:hover .simplebar-scrollbar:before,
+.simplebar-track .simplebar-scrollbar.visible:before {
+  /* When hovered, remove all transitions from drag handle */
+  //opacity: 0.5;
+  //-webkit-transition: opacity 0 linear;
+  //transition: opacity 0 linear;
+}
+
+.simplebar-track.vertical {
+  top: 0;
+}
+
+.simplebar-track.vertical .simplebar-scrollbar:before {
+  //top: 2px;
+  //bottom: 2px;
+}
+
+.simplebar-track.horizontal {
+  left: 0;
+  width: auto;
+  height: 47px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.simplebar-track.horizontal .simplebar-scrollbar:before {
+  //height: 100%;
+  //left: 2px;
+  //right: 2px;
+}
+
+.horizontal.simplebar-track .simplebar-scrollbar {
+  right: auto;
+  top: 2px;
+  height: 47px;
+  min-height: 0;
+  min-width: 10px;
+  width: auto;
+}
