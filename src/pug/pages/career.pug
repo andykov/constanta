@@ -20,69 +20,69 @@ block content
     section.section
         .container.is-fullhd
             .slider-people
-                ul#scrl.slider-people__list
-                    li
+                div.slider-people__list
+                    div
                         span
                             | Кирилл Лазарчук
                             span Аналитик
                         img(src="img/team/01-1.png")
-                    li
+                    div
                         span
                             | Юрий Усанов
                             span Аналитик
                         img(src="img/team/10-1.png")
-                    li
+                    div
                         span
                             | Анастасия Постовалова
                             span Аналитик
                         img(src="img/team/09-1.png")
-                    li
+                    div
                         span
                             | Екатерина Лебедева
                             span Менеджер Проектов
                         img(src="img/team/04-1.png")
-                    li
+                    div
                         span
                             | Александр Ветров
                             span Менеджер Проектов
                         img(src="img/team/02-1.png")
-                    li
+                    div
                         span
                             | Юрий Харламов
                             span Партнер
                         img(src="img/team/08-1.png")
-                    li
+                    div
                         span
                             | Константин Савчук
                             span Партнер
                         img(src="img/team/12-1.png")
-                    li
+                    div
                         span
                             | Георгий Никольский
                             span Партнер
 
                         img(src="img/team/03-1.png")
-                    li
+                    div
                         span
                             | Алексей Овсянников
                             span Партнер
                         img(src="img/team/13-1.png")
-                    li
+                    div
                         span
                             | Михаил Иванов
                             span Менеджер Проектов
                         img(src="img/team/05-1.png")
-                    li
+                    div
                         span
                             | Ольга Ульянова
                             span Менеджер Проектов
                         img(src="img/team/11-1.png")
-                    li
+                    div
                         span
                             | Дарья Алексеева
                             span Старший консультант
                         img(src="img/team/06-1.png")
-                    li
+                    div
                         span
                             | Дмитрий Ильин
                             span Менеджер Проектов
@@ -140,13 +140,77 @@ block footer
 
 block libsJS
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js")
-    script(src="js/libs/simplebar.js")
+    //script(src="js/libs/simplebar.js")
+    //script(src="js/libs/jquery.optiscroll.min.js")
+    //script(src="js/libs/jquery.custom-scrollbar.min.js")
+    script(src="js/libs/jquery.mCustomScrollbar.concat.min.js")
     script(src="js/template.js")
     //script(src="js/libs/sly.min.js")
     script.
+        $(document).ready(function () {
+
+            // $('.slider-people__list').customScrollbar();
+            $(window).on("load",function(){
+                $(".slider-people__list").mCustomScrollbar({
+                    axis:"x",
+                    advanced:{
+                        autoExpandHorizontalScroll: true,
+                        updateOnContentResize: false
+                    },
+                    callbacks: {
+                        onCreate: function () {
+                            console.log("Plugin markup generated");
+                            var outerContent = $('.mCSB_container');
+                            var innerContent = $('.mCSB_container > div');
+
+                            outerContent.scrollLeft((innerContent.width() - outerContent.width()) / 2);
+
+                        }
+                    }
+                });
+
+            });
 
 
-    //script.
+
+
+
+
+
+
+
+
+            // var el = new SimpleBar($('.slider-people__list')[0]);
+            //
+            // // console.log(el.getScrollElement());
+            // // // $('.simplebar-scrollbar').on('scroll', function (e) {
+            // // //     console.log(e);
+            // // // });
+            // el.getContentElement().addEventListener('scroll', function (e) {
+            //     console.log($('.simplebar-content').scrollLeft());
+            //     console.log($('.simplebar-track').scrollLeft());
+            //     console.log($('.simplebar-scrollbar').position().left);
+            //     // $bar.position();
+            // });
+            // // console.log(el.getContentElement());
+            //
+            // $('.simplebar-content').scroll(function () {
+            //     if ($('.simplebar-content').scrollLeft() > $('.simplebar-content').width() / 2) {
+            //         // middle of page hit, load extra content here
+            //         // alert('You are in the middle of the page');
+            //
+            //         // Uncomment out the line below to unbind the scroll event if the
+            //         // execution of this code is only desired once.
+            //         // $(this).unbind('scroll');
+            //     }
+            // });
+            //
+            //
+            // var scroll = (document.documentElement.scrollWidth - $('.simplebar-content').width()) / 2;
+            // if (document.documentElement.scrollWidth > $('.simplebar-content').width()) {
+            //     $('.simplebar-content').scrollLeft(scroll);
+            // }
+        });
     //    $(document).ready(function () {
     //
     //        var $frame = $('.slider-people');

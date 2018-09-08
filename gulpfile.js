@@ -26,7 +26,7 @@ var PATH = {
             'src/scss/**/*.scss'
         ],
         JS: [
-            'src/scripts/template.js',
+            'src/scripts/**/*.js',
             // 'src/scripts/pages/*.js'
         ],
         IMG: [
@@ -156,7 +156,7 @@ gulp.task('js', function () {
     //   }
     // }))
     // .pipe(concat('main.js'))
-        .pipe(include())
+    //     .pipe(include())
         .on('error', notify.onError(function (err) {
             return {
                 title: 'PUG',

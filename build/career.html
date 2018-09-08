@@ -44,21 +44,21 @@
       <section class="section">
         <div class="container is-fullhd">
           <div class="slider-people">
-            <ul class="slider-people__list" id="scrl">
-              <li><span>Кирилл Лазарчук<span>Аналитик</span></span><img src="img/team/01-1.png"></li>
-              <li><span>Юрий Усанов<span>Аналитик</span></span><img src="img/team/10-1.png"></li>
-              <li><span>Анастасия Постовалова<span>Аналитик</span></span><img src="img/team/09-1.png"></li>
-              <li><span>Екатерина Лебедева<span>Менеджер Проектов</span></span><img src="img/team/04-1.png"></li>
-              <li><span>Александр Ветров<span>Менеджер Проектов</span></span><img src="img/team/02-1.png"></li>
-              <li><span>Юрий Харламов<span>Партнер</span></span><img src="img/team/08-1.png"></li>
-              <li><span>Константин Савчук<span>Партнер</span></span><img src="img/team/12-1.png"></li>
-              <li><span>Георгий Никольский<span>Партнер</span></span><img src="img/team/03-1.png"></li>
-              <li><span>Алексей Овсянников<span>Партнер</span></span><img src="img/team/13-1.png"></li>
-              <li><span>Михаил Иванов<span>Менеджер Проектов</span></span><img src="img/team/05-1.png"></li>
-              <li><span>Ольга Ульянова<span>Менеджер Проектов</span></span><img src="img/team/11-1.png"></li>
-              <li><span>Дарья Алексеева<span>Старший консультант</span></span><img src="img/team/06-1.png"></li>
-              <li><span>Дмитрий Ильин<span>Менеджер Проектов</span></span><img src="img/team/07-1.png"></li>
-            </ul>
+            <div class="slider-people__list">
+              <div><span>Кирилл Лазарчук<span>Аналитик</span></span><img src="img/team/01-1.png"></div>
+              <div><span>Юрий Усанов<span>Аналитик</span></span><img src="img/team/10-1.png"></div>
+              <div><span>Анастасия Постовалова<span>Аналитик</span></span><img src="img/team/09-1.png"></div>
+              <div><span>Екатерина Лебедева<span>Менеджер Проектов</span></span><img src="img/team/04-1.png"></div>
+              <div><span>Александр Ветров<span>Менеджер Проектов</span></span><img src="img/team/02-1.png"></div>
+              <div><span>Юрий Харламов<span>Партнер</span></span><img src="img/team/08-1.png"></div>
+              <div><span>Константин Савчук<span>Партнер</span></span><img src="img/team/12-1.png"></div>
+              <div><span>Георгий Никольский<span>Партнер</span></span><img src="img/team/03-1.png"></div>
+              <div><span>Алексей Овсянников<span>Партнер</span></span><img src="img/team/13-1.png"></div>
+              <div><span>Михаил Иванов<span>Менеджер Проектов</span></span><img src="img/team/05-1.png"></div>
+              <div><span>Ольга Ульянова<span>Менеджер Проектов</span></span><img src="img/team/11-1.png"></div>
+              <div><span>Дарья Алексеева<span>Старший консультант</span></span><img src="img/team/06-1.png"></div>
+              <div><span>Дмитрий Ильин<span>Менеджер Проектов</span></span><img src="img/team/07-1.png"></div>
+            </div>
           </div>
           <div class="scrollbar">
             <div class="handle">
@@ -116,11 +116,78 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="js/libs/simplebar.js"></script>
+    <!--script(src="js/libs/simplebar.js")-->
+    <!--script(src="js/libs/jquery.optiscroll.min.js")-->
+    <!--script(src="js/libs/jquery.custom-scrollbar.min.js")-->
+    <script src="js/libs/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="js/template.js"></script>
     <!--script(src="js/libs/sly.min.js")-->
-    <script></script>
-    <!--script.-->
+    <script>
+      $(document).ready(function () {
+      
+          // $('.slider-people__list').customScrollbar();
+          $(window).on("load",function(){
+              $(".slider-people__list").mCustomScrollbar({
+                  axis:"x",
+                  advanced:{
+                      autoExpandHorizontalScroll: true,
+                      updateOnContentResize: false
+                  },
+                  callbacks: {
+                      onCreate: function () {
+                          console.log("Plugin markup generated");
+                          var outerContent = $('.mCSB_container');
+                          var innerContent = $('.mCSB_container > div');
+      
+                          outerContent.scrollLeft((innerContent.width() - outerContent.width()) / 2);
+      
+                      }
+                  }
+              });
+      
+          });
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+          // var el = new SimpleBar($('.slider-people__list')[0]);
+          //
+          // // console.log(el.getScrollElement());
+          // // // $('.simplebar-scrollbar').on('scroll', function (e) {
+          // // //     console.log(e);
+          // // // });
+          // el.getContentElement().addEventListener('scroll', function (e) {
+          //     console.log($('.simplebar-content').scrollLeft());
+          //     console.log($('.simplebar-track').scrollLeft());
+          //     console.log($('.simplebar-scrollbar').position().left);
+          //     // $bar.position();
+          // });
+          // // console.log(el.getContentElement());
+          //
+          // $('.simplebar-content').scroll(function () {
+          //     if ($('.simplebar-content').scrollLeft() > $('.simplebar-content').width() / 2) {
+          //         // middle of page hit, load extra content here
+          //         // alert('You are in the middle of the page');
+          //
+          //         // Uncomment out the line below to unbind the scroll event if the
+          //         // execution of this code is only desired once.
+          //         // $(this).unbind('scroll');
+          //     }
+          // });
+          //
+          //
+          // var scroll = (document.documentElement.scrollWidth - $('.simplebar-content').width()) / 2;
+          // if (document.documentElement.scrollWidth > $('.simplebar-content').width()) {
+          //     $('.simplebar-content').scrollLeft(scroll);
+          // }
+      });
+    </script>
     <!--    $(document).ready(function () {-->
     <!---->
     <!--        var $frame = $('.slider-people');-->
