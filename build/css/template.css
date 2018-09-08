@@ -2855,9 +2855,14 @@ a.tag:hover {
   float: left;
   max-width: 350px;
   max-height: 570px;
-  text-align: center; }
+  text-align: center;
+  -webkit-box-shadow: inset 0 -110px 400px 0 #fff;
+          box-shadow: inset 0 -110px 400px 0 #fff; }
   .mCSB_container > div:not(:first-child) {
     margin-left: -126px; }
+  .mCSB_container > div img {
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1); }
   .mCSB_container > div > span {
     min-height: 112px;
     display: -webkit-box;
@@ -2877,6 +2882,9 @@ a.tag:hover {
       display: none; }
   .mCSB_container > div:hover span span {
     display: block; }
+  .mCSB_container > div:hover img {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0); }
 
 .mCSB_scrollTools,
 .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,
