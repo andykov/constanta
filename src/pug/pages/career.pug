@@ -5,7 +5,6 @@ block title
 
 block css
     //link(href="css/libs/mCustomScrollbar.css")
-    link(href="css/libs/jquery.fancybox.min.css")
 
 block content
     section.section
@@ -164,14 +163,24 @@ block footer
 
 
     #modal-1.modal-body(style="display: none;")
-        h2.is-size-2  Консультант в группу управленческого консалтинга
-        .is-size-3 Обязанности
-            p Руководство командой разработчиков. Проект-менеджмент. Самостоятельная работа над проектами
-        .is-size-3 Требования
-            p Опыт самостоятельной разработки Full-stack от 3 лет. Умение ставить задачи и контролировать их выполнение.
-            p Ключевые навыки: PHP, HTML, JavaScript, CSS, jQuery
-        .is-size-3 Условия
-            p Конкурентная заработная плата сразу, быстрый выход на высокий уровень зарплаты. Офис в центре города. Лояльное руководство, отличные перспективы роста.
+        h2.is-size-2.has-text-weight-light  Консультант в группу управленческого консалтинга
+        p
+            span.is-size-3.has-text-grey.has-text-weight-semibold Обязанности
+            br
+            | Руководство командой разработчиков. Проект-менеджмент. Самостоятельная работа над проектами
+
+        p
+            span.is-size-3.has-text-grey.has-text-weight-semibold Требования
+            br
+            | Опыт самостоятельной разработки Full-stack от 3 лет. Умение ставить задачи и контролировать их выполнение.
+            br
+            | Ключевые навыки: PHP, HTML, JavaScript, CSS, jQuery
+
+        p
+            span.is-size-3.has-text-grey.has-text-weight-semibold Условия
+            br
+            | Конкурентная заработная плата сразу, быстрый выход на высокий уровень зарплаты. Офис в центре города. Лояльное руководство, отличные перспективы роста.
+
     #modal-2.modal-body(style="display: none;")
         h2.is-size-2  Консультант в группу управленческого консалтинга
         .is-size-3 Обязанности
@@ -185,7 +194,6 @@ block footer
 
 block libsJS
     script(src="js/libs/jquery.mCustomScrollbar.concat.min.js")
-    script(src="js/libs/jquery.fancybox.min.js")
     script(src="js/template.js")
     script.
         $(document).ready(function () {

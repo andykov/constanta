@@ -21,7 +21,8 @@
   -ms-user-select: none;
   user-select: none; }
 
-.box:not(:last-child), .content:not(:last-child), .block:not(:last-child), .highlight:not(:last-child) {
+.box:not(:last-child), .content:not(:last-child),
+.fancybox-content:not(:last-child), .block:not(:last-child), .highlight:not(:last-child) {
   margin-bottom: 1.5rem; }
 
 .delete {
@@ -1897,7 +1898,8 @@ a.has-text-danger:hover, a.has-text-danger:focus {
       .container.is-size-narrow {
         max-width: 720px; } }
 
-.content li + li {
+.content li + li,
+.fancybox-content li + li {
   margin-top: 1.15em; }
 
 .content p:not(:last-child),
@@ -1906,7 +1908,14 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 .content ul:not(:last-child),
 .content blockquote:not(:last-child),
 .content pre:not(:last-child),
-.content table:not(:last-child) {
+.content table:not(:last-child),
+.fancybox-content p:not(:last-child),
+.fancybox-content dl:not(:last-child),
+.fancybox-content ol:not(:last-child),
+.fancybox-content ul:not(:last-child),
+.fancybox-content blockquote:not(:last-child),
+.fancybox-content pre:not(:last-child),
+.fancybox-content table:not(:last-child) {
   margin-bottom: 1em; }
 
 .content h1,
@@ -1914,97 +1923,135 @@ a.has-text-danger:hover, a.has-text-danger:focus {
 .content h3,
 .content h4,
 .content h5,
-.content h6 {
+.content h6,
+.fancybox-content h1,
+.fancybox-content h2,
+.fancybox-content h3,
+.fancybox-content h4,
+.fancybox-content h5,
+.fancybox-content h6 {
   color: #363636; }
 
-.content h1 {
+.content h1,
+.fancybox-content h1 {
   margin-bottom: 0.5em; }
-  .content h1:not(:first-child) {
+  .content h1:not(:first-child),
+  .fancybox-content h1:not(:first-child) {
     margin-top: 1em; }
 
-.content h2 {
+.content h2,
+.fancybox-content h2 {
   margin-bottom: 1.389em; }
-  .content h2:not(:first-child) {
+  .content h2:not(:first-child),
+  .fancybox-content h2:not(:first-child) {
     margin-top: 1.1428em; }
 
-.content h3 {
+.content h3,
+.fancybox-content h3 {
   margin-bottom: 0.722em; }
   @media screen and (min-width: 769px), print {
-    .content h3 {
+    .content h3,
+    .fancybox-content h3 {
       margin-bottom: 2.222em; } }
-  .content h3:not(:first-child) {
+  .content h3:not(:first-child),
+  .fancybox-content h3:not(:first-child) {
     margin-top: 1.3333em; }
 
-.content h4 {
+.content h4,
+.fancybox-content h4 {
   margin-bottom: 0.8em; }
 
-.content h5 {
+.content h5,
+.fancybox-content h5 {
   margin-bottom: 0.8888em; }
 
-.content h6 {
+.content h6,
+.fancybox-content h6 {
   margin-bottom: 1em; }
 
-.content blockquote {
+.content blockquote,
+.fancybox-content blockquote {
   background-color: whitesmoke;
   border-left: 5px solid #dbdbdb;
   padding: 1.25em 1.5em; }
 
-.content ol {
+.content ol,
+.fancybox-content ol {
   list-style: decimal outside;
   margin-left: 2em;
   margin-top: 1em; }
 
-.content ul {
+.content ul,
+.fancybox-content ul {
   list-style: none;
   margin-top: 1em; }
-  .content ul li {
+  .content ul li,
+  .fancybox-content ul li {
     position: relative; }
-  .content ul.is-marker-orange li, .content ul.is-marker-gray li {
+  .content ul.is-marker-orange li, .content ul.is-marker-gray li,
+  .fancybox-content ul.is-marker-orange li,
+  .fancybox-content ul.is-marker-gray li {
     padding-left: 54px; }
-    .content ul.is-marker-orange li::before, .content ul.is-marker-gray li::before {
+    .content ul.is-marker-orange li::before, .content ul.is-marker-gray li::before,
+    .fancybox-content ul.is-marker-orange li::before,
+    .fancybox-content ul.is-marker-gray li::before {
       content: '';
       position: absolute;
       width: 0.667em;
       height: 0.500em;
       left: 0;
       top: 14px; }
-  .content ul.is-marker-orange li::before {
+  .content ul.is-marker-orange li::before,
+  .fancybox-content ul.is-marker-orange li::before {
     background-color: #FF5200; }
-  .content ul.is-marker-gray li::before {
+  .content ul.is-marker-gray li::before,
+  .fancybox-content ul.is-marker-gray li::before {
     background-color: rgba(0, 0, 0, 0.2); }
   @media screen and (max-width: 768px) {
-    .content ul.is-list-icon li .icon {
+    .content ul.is-list-icon li .icon,
+    .fancybox-content ul.is-list-icon li .icon {
       display: block;
       margin-bottom: 10px;
       margin-top: 16px; } }
   @media screen and (min-width: 769px), print {
-    .content ul.is-list-icon li {
+    .content ul.is-list-icon li,
+    .fancybox-content ul.is-list-icon li {
       padding-left: 45px; }
-      .content ul.is-list-icon li .icon {
+      .content ul.is-list-icon li .icon,
+      .fancybox-content ul.is-list-icon li .icon {
         position: absolute;
         left: 0;
         top: 3px; } }
-  .content ul ul {
+  .content ul ul,
+  .fancybox-content ul ul {
     list-style-type: circle;
     margin-top: 0.5em; }
-    .content ul ul ul {
+    .content ul ul ul,
+    .fancybox-content ul ul ul {
       list-style-type: square; }
 
-.content dd {
+.content dd,
+.fancybox-content dd {
   margin-left: 2em; }
 
-.content figure {
+.content figure,
+.fancybox-content figure {
   text-align: center; }
-  .content figure:not(:first-child) {
+  .content figure:not(:first-child),
+  .fancybox-content figure:not(:first-child) {
     margin-top: 2em; }
-  .content figure:not(:last-child) {
+  .content figure:not(:last-child),
+  .fancybox-content figure:not(:last-child) {
     margin-bottom: 2em; }
-  .content figure img {
+  .content figure img,
+  .fancybox-content figure img {
     display: inline-block; }
-  .content figure figcaption {
+  .content figure figcaption,
+  .fancybox-content figure figcaption {
     font-style: italic; }
 
-.content pre {
+.content pre,
+.fancybox-content pre {
   -webkit-overflow-scrolling: touch;
   overflow-x: auto;
   padding: 1.25em 1.5em;
@@ -2012,39 +2059,54 @@ a.has-text-danger:hover, a.has-text-danger:focus {
   word-wrap: normal; }
 
 .content sup,
-.content sub {
+.content sub,
+.fancybox-content sup,
+.fancybox-content sub {
   font-size: 75%; }
 
-.content table {
+.content table,
+.fancybox-content table {
   width: 100%; }
   .content table td,
-  .content table th {
+  .content table th,
+  .fancybox-content table td,
+  .fancybox-content table th {
     border: 1px solid #dbdbdb;
     border-width: 0 0 1px;
     padding: 0.5em 0.75em;
     vertical-align: top; }
-  .content table th {
+  .content table th,
+  .fancybox-content table th {
     color: #363636;
     text-align: left; }
   .content table thead td,
-  .content table thead th {
+  .content table thead th,
+  .fancybox-content table thead td,
+  .fancybox-content table thead th {
     border-width: 0 0 2px;
     color: #363636; }
   .content table tfoot td,
-  .content table tfoot th {
+  .content table tfoot th,
+  .fancybox-content table tfoot td,
+  .fancybox-content table tfoot th {
     border-width: 2px 0 0;
     color: #363636; }
   .content table tbody tr:last-child td,
-  .content table tbody tr:last-child th {
+  .content table tbody tr:last-child th,
+  .fancybox-content table tbody tr:last-child td,
+  .fancybox-content table tbody tr:last-child th {
     border-bottom-width: 0; }
 
-.content.is-small {
+.content.is-small,
+.fancybox-content.is-small {
   font-size: 0.77778rem; }
 
-.content.is-medium {
+.content.is-medium,
+.fancybox-content.is-medium {
   font-size: 1.44444rem; }
 
-.content.is-large {
+.content.is-large,
+.fancybox-content.is-large {
   font-size: 3.05556rem; }
 
 .icon {
@@ -2373,6 +2435,20 @@ a.tag:hover {
       background-color: #4b5c91;
       color: white; }
 
+.fancybox-is-open .fancybox-bg {
+  opacity: 1;
+  background-color: #fff; }
+
+.fancybox-button {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.05); }
+
+.modal-body {
+  max-width: 760px;
+  -webkit-box-shadow: 0px 5px 32px rgba(0, 0, 0, 0.07);
+          box-shadow: 0px 5px 32px rgba(0, 0, 0, 0.07); }
+
 .nav {
   background-color: white;
   padding: 0.889rem 1.5rem;
@@ -2428,21 +2504,6 @@ a.tag:hover {
       vertical-align: middle; }
   .nav__panel {
     display: none; }
-    @media screen and (min-width: 769px), print {
-      .nav__panel {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -webkit-align-items: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: end;
-        -webkit-justify-content: flex-end;
-            -ms-flex-pack: end;
-                justify-content: flex-end;
-        margin-left: auto; } }
   .nav__dropdown-wrap {
     padding-top: 10px;
     position: absolute;
@@ -2468,19 +2529,21 @@ a.tag:hover {
       padding: 18.5px 22px; }
       .nav__dropdown a:hover, .nav__dropdown a.is-active {
         color: darkorange; }
-  .nav__list {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
+  @media screen and (min-width: 769px), print {
+    .nav__list {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: end;
+      -webkit-justify-content: flex-end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      margin-left: auto; } }
   .nav__item {
     font-size: 0.88889rem;
     color: #4b5c91;
@@ -2491,14 +2554,16 @@ a.tag:hover {
     .nav__item .icon:only-child {
       margin-left: -0.25rem;
       margin-right: -0.25rem; }
-    .nav__item:hover > a, .nav__item.is-active > a {
+    .nav__item:hover, .nav__item.is-active {
       color: darkorange; }
-    .nav__item:hover .nav__dropdown-wrap, .nav__item.is-active .nav__dropdown-wrap {
-      visibility: visible;
-      opacity: 1;
-      -webkit-transform: translateY(0);
-          -ms-transform: translateY(0);
-              transform: translateY(0); }
+      .nav__item:hover > a, .nav__item.is-active > a {
+        color: darkorange; }
+      .nav__item:hover .nav__dropdown-wrap, .nav__item.is-active .nav__dropdown-wrap {
+        visibility: visible;
+        opacity: 1;
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0); }
     @media screen and (max-width: 768px) {
       .nav__item {
         display: block;

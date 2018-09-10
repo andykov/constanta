@@ -102,13 +102,6 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
 
   &__panel {
     display: none;
-
-    @include tablet {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      margin-left: auto;
-    }
   }
 
   &__dropdown-wrap {
@@ -143,9 +136,12 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
   }
 
   &__list {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-left: auto;
+    }
   }
 
   &__item {
@@ -164,6 +160,7 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
 
     &:hover,
     &.is-active {
+      color: $orange;
       > a { color: $orange; }
 
       .nav__dropdown-wrap {
