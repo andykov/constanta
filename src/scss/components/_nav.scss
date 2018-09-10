@@ -111,13 +111,15 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
 
   &__dropdown-wrap {
     padding-top: 10px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    visibility: hidden;
-    opacity: 0;
     transform: translateY(10px);
     transition: all 0.2s;
+    @include tablet {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      visibility: hidden;
+      opacity: 0;
+    }
   }
 
   &__dropdown {

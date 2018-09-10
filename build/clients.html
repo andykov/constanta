@@ -193,12 +193,15 @@
               var $nav = $(".nav"),
                   $burger = $nav.find(".nav__burger");
       
+      
               $burger.on("click", function () {
                   if ($(window).width() < 769) {
                       $nav.toggleClass("is-show-mobile");
                       $burger.toggleClass("is-active");
                   }
               });
+      
+      
       
       });
     </script>

@@ -2513,17 +2513,19 @@ a.tag:hover {
         display: flex; } }
   .nav__dropdown-wrap {
     padding-top: 10px;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    visibility: hidden;
-    opacity: 0;
     -webkit-transform: translateY(10px);
         -ms-transform: translateY(10px);
             transform: translateY(10px);
     -webkit-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s; }
+    @media screen and (min-width: 769px), print {
+      .nav__dropdown-wrap {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        visibility: hidden;
+        opacity: 0; } }
   .nav__dropdown {
     -webkit-box-shadow: 0px 5px 32px rgba(0, 0, 0, 0.07);
             box-shadow: 0px 5px 32px rgba(0, 0, 0, 0.07); }
