@@ -2504,6 +2504,13 @@ a.tag:hover {
       vertical-align: middle; }
   .nav__panel {
     display: none; }
+    @media screen and (min-width: 769px), print {
+      .nav__panel {
+        margin-left: auto;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; } }
   .nav__dropdown-wrap {
     padding-top: 10px;
     position: absolute;

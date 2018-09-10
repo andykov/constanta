@@ -102,6 +102,11 @@ $navbar-bottom-box-shadow-size: 0 -2px 0 0 !default;
 
   &__panel {
     display: none;
+    @include tablet {
+      margin-left: auto;
+      display: flex;
+    }
+
   }
 
   &__dropdown-wrap {
