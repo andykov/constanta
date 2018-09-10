@@ -6,6 +6,11 @@ $section-padding-large: 18rem 1.5rem !default;
 
 .section {
   padding: $section-padding;
+
+  &.is-shadow {
+    box-shadow: inset 0 -170px 400px 0 #fff;
+  }
+
   // Responsiveness
   @include mobile {
     padding: $section-padding-mobile;

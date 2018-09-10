@@ -3,92 +3,117 @@ extends ../template/_main
 block title
     | Career
 
+block css
+    //link(href="css/libs/mCustomScrollbar.css")
+    link(href="css/libs/jquery.fancybox.min.css")
+
 block content
     section.section
         .container.is-size-narrow
             .hero.has-text-centered
                 +hero('icon-consulting.svg', 'Карьера')
-    section.section
+    section.section.is-shadow
         .intro
             .container.is-fullhd
-                .slider-people
-                    div.slider-people__list
-                        div
-                            span
-                                | Кирилл Лазарчук
+                .slider-team
+                    div.slider-team__list
+                        div.slider-team__item
+                            span.slider-team__name
+                                | Кирилл
+                                br
+                                | Лазарчук
                                 span Аналитик
-                            img(src="img/team/01-1.png")
-                        div
-                            span
-                                | Юрий Усанов
+                            img(src="img/team/01-1.png").slider-team__photo
+                        div.slider-team__item
+                            span.slider-team__name
+                                | Юрий
+                                br
+                                | Усанов
                                 span Аналитик
-                            img(src="img/team/10-1.png")
-                        div
-                            span
-                                | Анастасия Постовалова
+                            img(src="img/team/10-1.png").slider-team__photo
+                        div.slider-team__item
+                            span.slider-team__name
+                                | Анастасия
+                                br
+                                | Постовалова
                                 span Аналитик
-                            img(src="img/team/09-1.png")
-                        div
-                            span
-                                | Екатерина Лебедева
+                            img(src="img/team/09-1.png").slider-team__photo
+                        div.slider-team__item
+                            span.slider-team__name
+                                | Екатерина
+                                br
+                                | Лебедева
                                 span Менеджер Проектов
-                            img(src="img/team/04-1.png")
-                        div
-                            span
-                                | Александр Ветров
+                            img(src="img/team/04-1.png").slider-team__photo
+                        div.slider-team__item
+                            span.slider-team__name
+                                | Александр
+                                br
+                                | Ветров
                                 span Менеджер Проектов
-                            img(src="img/team/02-1.png")
-                        div
-                            span
-                                | Юрий Харламов
+                            img(src="img/team/02-1.png").slider-team__photo
+                        div.slider-team__item
+                            span.slider-team__name
+                                | Юрий
+                                br
+                                | Харламов
                                 span Партнер
-                            img(src="img/team/08-1.png")
-                        div
-                            span
-                                | Константин Савчук
+                            img(src="img/team/08-1.png").slider-team__photo
+                        div.slider-team__item
+                            span.slider-team__name
+                                | Константин
+                                br
+                                | Савчук
                                 span Партнер
-                            img(src="img/team/12-1.png")
-                        div
-                            span
-                                | Георгий Никольский
+                            img(src="img/team/12-1.png").slider-team__photo
+                        div.slider-team__item
+                            span.slider-team__name
+                                | Георгий
+                                br
+                                | Никольский
                                 span Партнер
-
-                            img(src="img/team/03-1.png")
-                        div
-                            span
-                                | Алексей Овсянников
+                                .slider-team__photo
+                            img(src="img/team/03-1.png").slider-team__photo
+                        div.slider-team__item
+                            span.slider-team__name
+                                | Алексей
+                                br
+                                | Овсянников
                                 span Партнер
-                            img(src="img/team/13-1.png")
-                        div
-                            span
-                                | Михаил Иванов
+                            img(src="img/team/13-1.png").slider-team__photo
+                        div.slider-team__item
+                            span.slider-team__name
+                                | Михаил
+                                br
+                                | Иванов
                                 span Менеджер Проектов
-                            img(src="img/team/05-1.png")
-                        div
-                            span
-                                | Ольга Ульянова
+                            img(src="img/team/05-1.png").slider-team__photo
+                        div.slider-team__item
+                            span.slider-team__name
+                                | Ольга
+                                br
+                                | Ульянова
                                 span Менеджер Проектов
-                            img(src="img/team/11-1.png")
-                        div
-                            span
-                                | Дарья Алексеева
+                            img(src="img/team/11-1.png").slider-team__photo
+                        div.slider-team__item
+                            span.slider-team__name
+                                | Дарья
+                                br
+                                | Алексеева
                                 span Старший консультант
-                            img(src="img/team/06-1.png")
-                        div
-                            span
-                                | Дмитрий Ильин
+                            img(src="img/team/06-1.png").slider-team__photo
+                        div.slider-team__item
+                            span.slider-team__name
+                                | Дмитрий
+                                br
+                                | Ильин
                                 span Менеджер Проектов
-                            img(src="img/team/07-1.png")
-                .scrollbar
-                    .handle
-                        .mousearea
+                            img(src="img/team/07-1.png").slider-team__photo
 
-            //.container
-            //    figure.image
-            //        img(src="img/career-photo.jpg")
-            .container.is-size-narrow
-                p Наши люди — наш самый ценный актив.
-                p У нас работают талантливые и увлеченные своим делом консультанты, инвестиционные менеджеры, отраслевые эксперты и разработчики. Они обладают всеми необходимыми знаниями и опытом для решения самых интересных и сложных задач на стыке бизнеса и технологий, реализуя проекты в интересах крупнейших компаний сектора.
+    section.section
+        .container.is-size-narrow
+            p Наши люди — наш самый ценный актив.
+            p У нас работают талантливые и увлеченные своим делом консультанты, инвестиционные менеджеры, отраслевые эксперты и разработчики. Они обладают всеми необходимыми знаниями и опытом для решения самых интересных и сложных задач на стыке бизнеса и технологий, реализуя проекты в интересах крупнейших компаний сектора.
 
 
     section.section
@@ -97,25 +122,25 @@ block content
             .cards.is-border-top.is-gapless
                 .cards__item
                     .menu
-                        a(href="/").menu__link.is-size-3 Продуктовая и инновационная стратегия
+                        a(href="javascript:;" data-fancybox data-src="#modal-1").menu__link.is-size-3 Продуктовая и инновационная стратегия
                 .cards__item
                     .menu
-                        a(href="/").menu__link.is-size-3 Технологическая стратегия GTM стратегия
+                        a(href="javascript:;" data-fancybox data-src="#modal-2").menu__link.is-size-3 Технологическая стратегия GTM стратегия
                 .cards__item
                     .menu
-                        a(href="/").menu__link.is-size-3 Стратегия развития каналов обслуживания
+                        a(href="javascript:;" data-fancybox data-src="").menu__link.is-size-3 Стратегия развития каналов обслуживания
                 .cards__item
                     .menu
-                        a(href="/").menu__link.is-size-3 M&A стратегия
+                        a(href="javascript:;" data-fancybox data-src="").menu__link.is-size-3 M&A стратегия
                 .cards__item
                     .menu
-                        a(href="/").menu__link.is-size-3 Корпоративная стратегия
+                        a(href="javascript:;" data-fancybox data-src="").menu__link.is-size-3 Корпоративная стратегия
                 .cards__item
                     .menu
-                        a(href="/").menu__link.is-size-3 Стратегия развития каналов продаж
+                        a(href="javascript:;" data-fancybox data-src="").menu__link.is-size-3 Стратегия развития каналов продаж
                 .cards__item
                     .menu
-                        a(href="/").menu__link.is-size-3 Цифровая стратегия
+                        a(href="javascript:;" data-fancybox data-src="").menu__link.is-size-3 Цифровая стратегия
 
 block footer
     footer.footer
@@ -138,32 +163,44 @@ block footer
                             span.is-size-7.has-text-grey-dark © Constanta, 2009–2018
 
 
+    #modal-1.modal-body(style="display: none;")
+        h2.is-size-2  Консультант в группу управленческого консалтинга
+        .is-size-3 Обязанности
+            p Руководство командой разработчиков. Проект-менеджмент. Самостоятельная работа над проектами
+        .is-size-3 Требования
+            p Опыт самостоятельной разработки Full-stack от 3 лет. Умение ставить задачи и контролировать их выполнение.
+            p Ключевые навыки: PHP, HTML, JavaScript, CSS, jQuery
+        .is-size-3 Условия
+            p Конкурентная заработная плата сразу, быстрый выход на высокий уровень зарплаты. Офис в центре города. Лояльное руководство, отличные перспективы роста.
+    #modal-2.modal-body(style="display: none;")
+        h2.is-size-2  Консультант в группу управленческого консалтинга
+        .is-size-3 Обязанности
+            p Руководство командой разработчиков. Проект-менеджмент. Самостоятельная работа над проектами
+        .is-size-3 Требования
+            p Опыт самостоятельной разработки Full-stack от 3 лет. Умение ставить задачи и контролировать их выполнение.
+        .is-size-3 Условия
+            p Конкурентная заработная плата сразу, быстрый выход на высокий уровень зарплаты. Офис в центре города. Лояльное руководство, отличные перспективы роста.
+
+
+
 block libsJS
     script(src="js/libs/jquery.mCustomScrollbar.concat.min.js")
+    //script(src="js/libs/simplebar.js")
+    script(src="js/libs/jquery.fancybox.min.js")
     script(src="js/template.js")
     script.
         $(document).ready(function () {
 
-            // $('.slider-people__list').customScrollbar();
-            $(window).on("load",function(){
-                $(".slider-people__list").mCustomScrollbar({
-                    axis:"x",
-                    advanced:{
-                        autoExpandHorizontalScroll: true,
-                        updateOnContentResize: false
-                    },
-                    callbacks: {
-                        onCreate: function () {
-                            console.log("Plugin markup generated");
-                            var outerContent = $('.mCSB_container');
-                            var innerContent = $('.mCSB_container > div');
-
-                            outerContent.scrollLeft((innerContent.width() - outerContent.width()) / 2);
-
-                        }
-                    }
-                });
-
+            $(".slider-team__list").mCustomScrollbar({
+                axis: "x",
+                advanced: {
+                    autoExpandHorizontalScroll: true
+                },
+                mouseWheel: {
+                    enable: false
+                }
             });
+
+            // var myInstance = new SimpleBar($('.slider-team__list')[0])
 
         });

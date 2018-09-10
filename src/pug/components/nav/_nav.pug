@@ -8,14 +8,29 @@ mixin headerNav(url,text)
     .nav__brand
       a(href="/")
         img(src='img/svg/logo.svg')
-    nav.nav__list
-        a(href='services.html').nav__item Услуги
-        a(href='clients.html').nav__item Клиенты
-        a(href='career.html').nav__item Карьера
-        a(href='contacts.html').nav__item Контакты
-        .lang
-            a(href='#').lang__item.is-active= 'ru'
-            a(href='#').lang__item= 'en'
+    nav.nav__panel
+      ul.nav__list
+        li.nav__item
+          a(href='services.html') Услуги
+          .nav__dropdown-wrap
+              ul.nav__dropdown
+                li
+                  a(href='service-consulting.html') Constanta.Consulting
+                li
+                  a(href='service-investments.html') Constanta.Investments
+                li
+                  a(href='service-forensic.html') Constanta.Forensic
+                li
+                  a(href='service-predtech.html') Constanta.Predtech
+        li.nav__item
+          a(href='clients.html') Клиенты
+        li.nav__item
+          a(href='career.html') Карьера
+        li.nav__item
+          a(href='contacts.html') Контакты
+      .lang
+        a(href='#').lang__item.is-active= 'ru'
+        a(href='#').lang__item= 'en'
     button.nav__burger
         span
         span

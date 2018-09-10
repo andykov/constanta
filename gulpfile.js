@@ -26,7 +26,7 @@ var PATH = {
             'src/scss/**/*.scss'
         ],
         JS: [
-            'src/scripts/**/*.js',
+            'src/scripts/*.js',
             // 'src/scripts/pages/*.js'
         ],
         IMG: [
@@ -56,6 +56,7 @@ var PATH = {
     WATCH: {
         PUG: ['src/pug/**/*.pug'],
         SCSS: ['src/scss/**/*.scss'],
+        CSS: ['src/scss/libs/*.css'],
         JS: ['src/scripts/template.js', 'src/scripts/pages/*.js'],
         IMG: ['src/images/**/*.{jpg,jpeg,gif,png}'],
         SVG: ['src/images/svg/*.svg']
@@ -84,6 +85,12 @@ gulp.task('scss', function () {
         .pipe(debug({title: 'обработано SCSS файлов'}))
         // .pipe(sourcemaps.write())
         .pipe(gulp.dest(PATH.BUILD.CSS))
+        .pipe(browserSync.stream());
+});
+gulp.task('css', function () {
+    console.log('---------- Обработка CSS');
+    return gulp.src('src/scss/libs/*.css')
+        .pipe(gulp.dest(PATH.BUILD.CSS + 'libs'))
         .pipe(browserSync.stream());
 });
 
@@ -167,7 +174,12 @@ gulp.task('js', function () {
         .pipe(gulp.dest(PATH.BUILD.JS))
         .pipe(browserSync.stream({once: true}));
 });
-
+gulp.task('js_libs', function () {
+    console.log('---------- Обработка JS libs');
+    return gulp.src('src/scripts/libs/*.js')
+        .pipe(gulp.dest(PATH.BUILD.JS + 'libs'))
+        .pipe(browserSync.stream());
+});
 
 /*--------------------------------------------------------------
 # FONTS
@@ -180,47 +192,8 @@ gulp.task('fonts', function () {
 
 
 /*--------------------------------------------------------------
-# Оптимизация и копирование изображений
+# Копирование изображений
 --------------------------------------------------------------*/
-// gulp.task('img', function () {
-//     console.log('---------- Оптимизация картинок');
-//     return gulp.src(PATH.SRC.IMG)
-//       .pipe(imagemin({
-//         progressive: true,
-//         svgoPlugins: [{removeViewBox: false}],
-//         use: [pngquant()]
-//       })).on('error', notify.onError(function(err){
-//             return {
-//                 title: 'IMG',
-//                 message: err.message
-//             };
-//       }))
-//       .pipe(gulp.dest(PATH.BUILD.IMG));
-// });
-
-// gulp.task('sprite:svg', function () {
-
-//       console.log('---------- Сборка SVG спрайта');
-//       return gulp.src(PATH.SRC.SVG)
-//         // .pipe(svgmin(function (file) {
-//         //   return {
-//         //     plugins: [{
-//         //       cleanupIDs: {
-//         //         minify: true
-//         //       }
-//         //     }]
-//         //   }
-//         // }))
-//         .pipe(svgstore())
-//         // .pipe(svgstore({ inlineSvg: true }))
-//         .pipe(rename('sprite-svg.svg'))
-//         // .pipe(size({
-//         //   title: 'Размер',
-//         //   showFiles: true,
-//         //   showTotal: false,
-//         // }))
-//         .pipe(gulp.dest(PATH.BUILD.SVG));
-// });
 gulp.task('img', function () {
     console.log('---------- Копирование IMG');
     return gulp.src(PATH.SRC.IMG)
@@ -246,7 +219,7 @@ gulp.task('clean', function () {
 # All task
 --------------------------------------------------------------*/
 gulp.task('build', gulp.series('clean',
-    gulp.parallel('scss', 'pug', 'js', 'img', 'svg', 'fonts'))
+    gulp.parallel('scss', 'css', 'pug', 'js', 'js_libs', 'img', 'svg', 'fonts'))
 );
 
 
@@ -265,6 +238,7 @@ gulp.task('serve', function () {
     // });
     gulp.watch(PATH.WATCH.PUG, gulp.series('pug'));
     gulp.watch(PATH.WATCH.SCSS, gulp.series('scss'));
+    gulp.watch(PATH.WATCH.SCSS, gulp.series('css'));
     gulp.watch(PATH.WATCH.JS, gulp.series('js'));
     gulp.watch(PATH.WATCH.IMG, gulp.series('img'));
     gulp.watch(PATH.WATCH.SVG, gulp.series('svg'));

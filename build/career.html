@@ -8,12 +8,29 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700&amp;amp;subset=cyrillic">
     <link rel="stylesheet" href="css/libs.css">
     <link rel="stylesheet" href="css/template.css">
+    <!--link(href="css/libs/mCustomScrollbar.css")-->
+    <link href="css/libs/jquery.fancybox.min.css">
   </head>
   <body>
     <div class="nav">
       <div class="container">
         <div class="nav__brand"><a href="/"><img src="img/svg/logo.svg"></a></div>
-        <nav class="nav__list"><a class="nav__item" href="services.html">Услуги</a><a class="nav__item" href="clients.html">Клиенты</a><a class="nav__item" href="career.html">Карьера</a><a class="nav__item" href="contacts.html">Контакты</a>
+        <nav class="nav__panel">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="services.html">Услуги</a>
+              <div class="nav__dropdown-wrap">
+                <ul class="nav__dropdown">
+                  <li><a href="service-consulting.html">Constanta.Consulting</a></li>
+                  <li><a href="service-investments.html">Constanta.Investments</a></li>
+                  <li><a href="service-forensic.html">Constanta.Forensic</a></li>
+                  <li><a href="service-predtech.html">Constanta.Predtech</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav__item"><a href="clients.html">Клиенты</a></li>
+            <li class="nav__item"><a href="career.html">Карьера</a></li>
+            <li class="nav__item"><a href="contacts.html">Контакты</a></li>
+          </ul>
           <div class="lang"><a class="lang__item is-active" href="#">ru</a><a class="lang__item" href="#">en</a></div>
         </nav>
         <button class="nav__burger"><span></span><span></span><span></span></button>
@@ -30,39 +47,34 @@
           </div>
         </div>
       </section>
-      <section class="section">
+      <section class="section is-shadow">
         <div class="intro">
           <div class="container is-fullhd">
-            <div class="slider-people">
-              <div class="slider-people__list">
-                <div><span>Кирилл Лазарчук<span>Аналитик</span></span><img src="img/team/01-1.png"></div>
-                <div><span>Юрий Усанов<span>Аналитик</span></span><img src="img/team/10-1.png"></div>
-                <div><span>Анастасия Постовалова<span>Аналитик</span></span><img src="img/team/09-1.png"></div>
-                <div><span>Екатерина Лебедева<span>Менеджер Проектов</span></span><img src="img/team/04-1.png"></div>
-                <div><span>Александр Ветров<span>Менеджер Проектов</span></span><img src="img/team/02-1.png"></div>
-                <div><span>Юрий Харламов<span>Партнер</span></span><img src="img/team/08-1.png"></div>
-                <div><span>Константин Савчук<span>Партнер</span></span><img src="img/team/12-1.png"></div>
-                <div><span>Георгий Никольский<span>Партнер</span></span><img src="img/team/03-1.png"></div>
-                <div><span>Алексей Овсянников<span>Партнер</span></span><img src="img/team/13-1.png"></div>
-                <div><span>Михаил Иванов<span>Менеджер Проектов</span></span><img src="img/team/05-1.png"></div>
-                <div><span>Ольга Ульянова<span>Менеджер Проектов</span></span><img src="img/team/11-1.png"></div>
-                <div><span>Дарья Алексеева<span>Старший консультант</span></span><img src="img/team/06-1.png"></div>
-                <div><span>Дмитрий Ильин<span>Менеджер Проектов</span></span><img src="img/team/07-1.png"></div>
-              </div>
-            </div>
-            <div class="scrollbar">
-              <div class="handle">
-                <div class="mousearea"></div>
+            <div class="slider-team">
+              <div class="slider-team__list">
+                <div class="slider-team__item"><span class="slider-team__name">Кирилл<br>Лазарчук<span>Аналитик</span></span><img class="slider-team__photo" src="img/team/01-1.png"></div>
+                <div class="slider-team__item"><span class="slider-team__name">Юрий<br>Усанов<span>Аналитик</span></span><img class="slider-team__photo" src="img/team/10-1.png"></div>
+                <div class="slider-team__item"><span class="slider-team__name">Анастасия<br>Постовалова<span>Аналитик</span></span><img class="slider-team__photo" src="img/team/09-1.png"></div>
+                <div class="slider-team__item"><span class="slider-team__name">Екатерина<br>Лебедева<span>Менеджер Проектов</span></span><img class="slider-team__photo" src="img/team/04-1.png"></div>
+                <div class="slider-team__item"><span class="slider-team__name">Александр<br>Ветров<span>Менеджер Проектов</span></span><img class="slider-team__photo" src="img/team/02-1.png"></div>
+                <div class="slider-team__item"><span class="slider-team__name">Юрий<br>Харламов<span>Партнер</span></span><img class="slider-team__photo" src="img/team/08-1.png"></div>
+                <div class="slider-team__item"><span class="slider-team__name">Константин<br>Савчук<span>Партнер</span></span><img class="slider-team__photo" src="img/team/12-1.png"></div>
+                <div class="slider-team__item"><span class="slider-team__name">Георгий<br>Никольский<span>Партнер</span>
+                    <div class="slider-team__photo"></div></span><img class="slider-team__photo" src="img/team/03-1.png"></div>
+                <div class="slider-team__item"><span class="slider-team__name">Алексей<br>Овсянников<span>Партнер</span></span><img class="slider-team__photo" src="img/team/13-1.png"></div>
+                <div class="slider-team__item"><span class="slider-team__name">Михаил<br>Иванов<span>Менеджер Проектов</span></span><img class="slider-team__photo" src="img/team/05-1.png"></div>
+                <div class="slider-team__item"><span class="slider-team__name">Ольга<br>Ульянова<span>Менеджер Проектов</span></span><img class="slider-team__photo" src="img/team/11-1.png"></div>
+                <div class="slider-team__item"><span class="slider-team__name">Дарья<br>Алексеева<span>Старший консультант</span></span><img class="slider-team__photo" src="img/team/06-1.png"></div>
+                <div class="slider-team__item"><span class="slider-team__name">Дмитрий<br>Ильин<span>Менеджер Проектов</span></span><img class="slider-team__photo" src="img/team/07-1.png"></div>
               </div>
             </div>
           </div>
-          <!--.container-->
-          <!--    figure.image-->
-          <!--        img(src="img/career-photo.jpg")-->
-          <div class="container is-size-narrow">
-            <p>Наши люди — наш самый ценный актив.</p>
-            <p>У нас работают талантливые и увлеченные своим делом консультанты, инвестиционные менеджеры, отраслевые эксперты и разработчики. Они обладают всеми необходимыми знаниями и опытом для решения самых интересных и сложных задач на стыке бизнеса и технологий, реализуя проекты в интересах крупнейших компаний сектора.</p>
-          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container is-size-narrow">
+          <p>Наши люди — наш самый ценный актив.</p>
+          <p>У нас работают талантливые и увлеченные своим делом консультанты, инвестиционные менеджеры, отраслевые эксперты и разработчики. Они обладают всеми необходимыми знаниями и опытом для решения самых интересных и сложных задач на стыке бизнеса и технологий, реализуя проекты в интересах крупнейших компаний сектора.</p>
         </div>
       </section>
       <section class="section">
@@ -70,25 +82,25 @@
           <h2 class="is-size-2 has-text-centered">Открытые вакансии</h2>
           <div class="cards is-border-top is-gapless">
             <div class="cards__item">
-              <div class="menu"><a class="menu__link is-size-3" href="/">Продуктовая и инновационная стратегия</a></div>
+              <div class="menu"><a class="menu__link is-size-3" href="javascript:;" data-fancybox data-src="#modal-1">Продуктовая и инновационная стратегия</a></div>
             </div>
             <div class="cards__item">
-              <div class="menu"><a class="menu__link is-size-3" href="/">Технологическая стратегия GTM стратегия</a></div>
+              <div class="menu"><a class="menu__link is-size-3" href="javascript:;" data-fancybox data-src="#modal-2">Технологическая стратегия GTM стратегия</a></div>
             </div>
             <div class="cards__item">
-              <div class="menu"><a class="menu__link is-size-3" href="/">Стратегия развития каналов обслуживания</a></div>
+              <div class="menu"><a class="menu__link is-size-3" href="javascript:;" data-fancybox data-src="">Стратегия развития каналов обслуживания</a></div>
             </div>
             <div class="cards__item">
-              <div class="menu"><a class="menu__link is-size-3" href="/">M&A стратегия</a></div>
+              <div class="menu"><a class="menu__link is-size-3" href="javascript:;" data-fancybox data-src="">M&A стратегия</a></div>
             </div>
             <div class="cards__item">
-              <div class="menu"><a class="menu__link is-size-3" href="/">Корпоративная стратегия</a></div>
+              <div class="menu"><a class="menu__link is-size-3" href="javascript:;" data-fancybox data-src="">Корпоративная стратегия</a></div>
             </div>
             <div class="cards__item">
-              <div class="menu"><a class="menu__link is-size-3" href="/">Стратегия развития каналов продаж</a></div>
+              <div class="menu"><a class="menu__link is-size-3" href="javascript:;" data-fancybox data-src="">Стратегия развития каналов продаж</a></div>
             </div>
             <div class="cards__item">
-              <div class="menu"><a class="menu__link is-size-3" href="/">Цифровая стратегия</a></div>
+              <div class="menu"><a class="menu__link is-size-3" href="javascript:;" data-fancybox data-src="">Цифровая стратегия</a></div>
             </div>
           </div>
         </div>
@@ -112,33 +124,50 @@
         </div>
       </div>
     </footer>
+    <div class="modal-body" id="modal-1" style="display: none;">
+      <h2 class="is-size-2"> Консультант в группу управленческого консалтинга</h2>
+      <div class="is-size-3">Обязанности
+        <p>Руководство командой разработчиков. Проект-менеджмент. Самостоятельная работа над проектами</p>
+      </div>
+      <div class="is-size-3">Требования
+        <p>Опыт самостоятельной разработки Full-stack от 3 лет. Умение ставить задачи и контролировать их выполнение.</p>
+        <p>Ключевые навыки: PHP, HTML, JavaScript, CSS, jQuery</p>
+      </div>
+      <div class="is-size-3">Условия
+        <p>Конкурентная заработная плата сразу, быстрый выход на высокий уровень зарплаты. Офис в центре города. Лояльное руководство, отличные перспективы роста.</p>
+      </div>
+    </div>
+    <div class="modal-body" id="modal-2" style="display: none;">
+      <h2 class="is-size-2"> Консультант в группу управленческого консалтинга</h2>
+      <div class="is-size-3">Обязанности
+        <p>Руководство командой разработчиков. Проект-менеджмент. Самостоятельная работа над проектами</p>
+      </div>
+      <div class="is-size-3">Требования
+        <p>Опыт самостоятельной разработки Full-stack от 3 лет. Умение ставить задачи и контролировать их выполнение.</p>
+      </div>
+      <div class="is-size-3">Условия
+        <p>Конкурентная заработная плата сразу, быстрый выход на высокий уровень зарплаты. Офис в центре города. Лояльное руководство, отличные перспективы роста.</p>
+      </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/libs/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--script(src="js/libs/simplebar.js")-->
+    <script src="js/libs/jquery.fancybox.min.js"></script>
     <script src="js/template.js"></script>
     <script>
       $(document).ready(function () {
       
-          // $('.slider-people__list').customScrollbar();
-          $(window).on("load",function(){
-              $(".slider-people__list").mCustomScrollbar({
-                  axis:"x",
-                  advanced:{
-                      autoExpandHorizontalScroll: true,
-                      updateOnContentResize: false
-                  },
-                  callbacks: {
-                      onCreate: function () {
-                          console.log("Plugin markup generated");
-                          var outerContent = $('.mCSB_container');
-                          var innerContent = $('.mCSB_container > div');
-      
-                          outerContent.scrollLeft((innerContent.width() - outerContent.width()) / 2);
-      
-                      }
-                  }
-              });
-      
+          $(".slider-team__list").mCustomScrollbar({
+              axis: "x",
+              advanced: {
+                  autoExpandHorizontalScroll: true
+              },
+              mouseWheel: {
+                  enable: false
+              }
           });
+      
+          // var myInstance = new SimpleBar($('.slider-team__list')[0])
       
       });
     </script>
