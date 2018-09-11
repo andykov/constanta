@@ -2725,6 +2725,11 @@ a.tag:hover {
     margin: 0 !important;
     padding: 0;
     height: 100%; }
+    .slider-team__list .mCSB_container {
+      padding-right: 100px; }
+      @media screen and (min-width: 769px), print {
+        .slider-team__list .mCSB_container {
+          padding-right: 200px; } }
   .slider-team__item {
     display: block;
     float: left;

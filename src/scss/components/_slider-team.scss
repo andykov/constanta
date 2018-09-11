@@ -19,6 +19,13 @@
     margin: 0 !important;
     padding: 0;
     height: 100%;
+
+    .mCSB_container {
+      padding-right: 100px;
+      @include tablet {
+        padding-right: 200px;
+      }
+    }
   }
 
   &__item {
