@@ -4709,8 +4709,12 @@ a.tag:hover {
 .section {
   padding: 3.111em 1.42857rem; }
   .section.is-shadow {
-    -webkit-box-shadow: inset 0 -170px 400px 0 #fff;
-            box-shadow: inset 0 -170px 400px 0 #fff; }
+    -webkit-box-shadow: inset 0 -110px 400px 0 #fff;
+            box-shadow: inset 0 -110px 400px 0 #fff; }
+  .section.pt-0 {
+    padding-top: 0; }
+  .section.pb-0 {
+    padding-bottom: 0; }
   @media screen and (max-width: 768px) {
     .section {
       padding: 2.214em 1.42857rem; } }
