@@ -271,6 +271,12 @@ body {
   font-weight: 400;
   line-height: 1.8125; }
 
+::-moz-selection {
+  background-color: rgba(255, 82, 0, 0.4); }
+
+::selection {
+  background-color: rgba(255, 82, 0, 0.4); }
+
 a {
   color: #4b5c91;
   cursor: pointer;
@@ -2722,11 +2728,12 @@ a.tag:hover {
   .slider-team__item {
     display: block;
     float: left;
-    max-width: 350px;
+    max-width: 250px;
     max-height: 500px;
     text-align: center; }
     @media screen and (min-width: 769px), print {
       .slider-team__item {
+        max-width: 350px;
         max-height: 570px; } }
     .slider-team__item:not(:first-child) {
       margin-left: -126px; }
@@ -2768,6 +2775,10 @@ a.tag:hover {
     -webkit-filter: grayscale(1);
             filter: grayscale(1);
     z-index: -1; }
+    .slider-team__photo::-moz-selection {
+      background-color: transparent; }
+    .slider-team__photo::selection {
+      background-color: transparent; }
 
 .mCustomScrollbar {
   -ms-touch-action: pinch-zoom;

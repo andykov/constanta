@@ -67,6 +67,10 @@ body {
   line-height: $body-line-height;
 }
 
+::selection {
+  background-color: rgba(255, 82, 0, 0.4);
+}
+
 // Inline
 
 a {

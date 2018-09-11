@@ -24,11 +24,12 @@
   &__item {
     display: block;
     float: left;
-    max-width: 350px;
+    max-width: 250px;
     max-height: 500px;
     text-align: center;
 
     @include tablet {
+      max-width: 350px;
       max-height: 570px;
     }
 
@@ -74,5 +75,8 @@
     position: relative;
     filter: grayscale(1);
     z-index: -1;
+    &::selection {
+      background-color: transparent;
+    }
   }
 }

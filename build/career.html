@@ -36,7 +36,7 @@
       </div>
     </div>
     <main class="content">
-      <section class="section">
+      <section class="section pb-0">
         <div class="container is-size-narrow">
           <div class="hero has-text-centered">
             <div class="hero__icon"><img src="img/svg/icon-consulting.svg"/></div>
@@ -140,17 +140,23 @@
     <script src="js/template.js"></script>
     <script>
       $(document).ready(function () {
+          $(window).on("load",function(){
       
-          $(".slider-team__list").mCustomScrollbar({
-              axis: "x",
-              advanced: {
-                  autoExpandHorizontalScroll: true
-              },
-              mouseWheel: {
-                  enable: false
-              }
+              $(".slider-team__list").mCustomScrollbar({
+                  axis: "x",
+                  scrollEasing:"linear",
+                  advanced: {
+                      autoExpandHorizontalScroll: true
+                  },
+                  mouseWheel: {
+                      enable: false
+                  }
+              });
+      
+              setTimeout(function () {
+                  $(".slider-team__list").mCustomScrollbar('scrollTo','50%');
+              }, 100)
           });
-      
       });
     </script>
     <script>
