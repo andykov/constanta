@@ -2725,6 +2725,9 @@ a.tag:hover {
     margin: 0 !important;
     padding: 0;
     height: 100%; }
+    .slider-team__list.mCustomScrollbar, .slider-team__list.mCustomScrollbar.mCS_touch_action {
+      -ms-touch-action: manipulation;
+          touch-action: manipulation; }
     .slider-team__list .mCSB_container {
       padding-right: 100px; }
       @media screen and (min-width: 769px), print {

@@ -20,6 +20,11 @@
     padding: 0;
     height: 100%;
 
+    &.mCustomScrollbar,
+    &.mCustomScrollbar.mCS_touch_action {
+      touch-action: manipulation;
+    }
+
     .mCSB_container {
       padding-right: 100px;
       @include tablet {
