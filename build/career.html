@@ -148,8 +148,8 @@
                   advanced: {
                       autoExpandHorizontalScroll: true
                   },
-                  contentTouchScroll: 100,
-                  documentTouchScroll: true,
+                  // contentTouchScroll: 100,
+                  // documentTouchScroll: false,
                   mouseWheel: {
                       enable: false
                   }
@@ -157,8 +157,12 @@
       
               setTimeout(function () {
                   $(".slider-team__list").mCustomScrollbar('scrollTo','50%');
-              }, 100)
+              }, 100);
+              // if ($(window).width() < 768) {
+              //     $(".slider-team__list").mCustomScrollbar('destroy');
+              // }
           });
+      
       });
     </script>
     <script>
