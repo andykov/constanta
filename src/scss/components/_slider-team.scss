@@ -37,6 +37,7 @@
     margin: 0 !important;
     padding: 0;
     height: 100%;
+    //width: 100%;
     display: flex;
     opacity: 0;
     visibility: hidden;
@@ -63,6 +64,8 @@
   &__item {
     //display: block;
     //float: left;
+    //flex: 1;
+    width: 100%;
     max-width: 220px;
     max-height: 330px;
     text-align: center;

@@ -112,30 +112,77 @@
     </footer>
     <!--script(src="js/libs/jquery-3.3.1.min.js")-->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/libs/jquery.gray.min.js"></script>
     <script src="js/libs/jquery.fancybox.min.js"></script>
     <script>
       $(document).ready(function () {
-              $("[data-fancybox]").fancybox({
-                  btnTpl: {
-                      smallBtn:
-                          '<button data-fancybox-close class="fancybox-button fancybox-close-small" title="{{CLOSE}}">' +
-                          '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="a" fill="#fff"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.98 15.025L1.414.459l-.955.956L15.023 15.98.46 30.545l.955.956L15.98 16.935l14.565 14.566.955-.956L16.936 15.98 31.5 1.415l-.955-.956L15.98 15.025z"/></mask><path fill-rule="evenodd" clip-rule="evenodd" d="M15.98 15.025L1.414.459l-.955.956L15.023 15.98.46 30.545l.955.956L15.98 16.935l14.565 14.566.955-.956L16.936 15.98 31.5 1.415l-.955-.956L15.98 15.025z" fill="#979797"/><path d="M1.414.46l.707-.708-.707-.707-.707.708.707.706zM15.98 15.024l-.707.707.707.707.708-.707-.707-.707zM.46 1.415L-.248.708l-.707.707.707.707.707-.707zM15.023 15.98l.708.707.707-.707-.707-.707-.708.707zM.46 30.545l-.707-.707-.707.707.707.707.707-.707zm.955.956l-.707.707.707.707.707-.707-.707-.707zM15.98 16.935l.708-.707-.707-.707-.708.707.707.707zm14.565 14.566l-.707.707.707.707.707-.707-.707-.707zm.955-.956l.707.707.707-.707-.707-.707-.707.707zM16.936 15.98l-.708-.707-.707.707.707.707.707-.707zM31.5 1.415l.707.707.707-.707-.707-.707-.707.707zm-.955-.956l.707-.706-.707-.708-.707.707.707.707zM.707 1.167l14.566 14.565 1.415-1.414L2.12-.248.707 1.167zm.46.955l.954-.956L.707-.247l-.955.955 1.414 1.414zM15.73 15.273L1.166.708-.248 2.122l14.564 14.565 1.415-1.414zm-1.415 0L-.248 29.838l1.414 1.414 14.565-14.565-1.415-1.414zM-.248 31.253l.955.955 1.414-1.414-.955-.956-1.414 1.414zm2.37.955l14.566-14.565-1.415-1.415L.707 30.794l1.414 1.414zm29.13-1.414L16.688 16.228l-1.415 1.414 14.565 14.566 1.414-1.414zm-.46-.956l-.954.956 1.414 1.414.955-.956-1.414-1.414zm-14.564-13.15l14.565 14.564 1.414-1.414-14.564-14.565-1.415 1.414zm1.415 0L32.207 2.121 30.793.708 16.228 15.273l1.415 1.414zM32.207.707l-.955-.955-1.414 1.413.955.956L32.207.708zm-2.37-.956L15.274 14.318l1.415 1.414L31.252 1.167 29.838-.248z" fill="#979797" mask="url(#a)"/></svg>' +
-                          "</button>",
+          // $('.is-grayscale').gray();
+          // $('img').grayscale();
+          // $('.image').BlackAndWhite({
+          //     hoverEffect: true, // default true
+          //     // set the path to BnWWorker.js for a superfast implementation
+          //     webworkerPath: false,
+          //     // to invert the hover effect
+          //     invertHoverEffect: false,
+          //     // this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
+          //     intensity: 1,
+          //     speed: { //this property could also be just speed: value for both fadeIn and fadeOut
+          //         fadeIn: 200, // 200ms for fadeIn animations
+          //         fadeOut: 800 // 800ms for fadeOut animations
+          //     },
+          //     onImageReady: function (img) {
+          //         // this callback gets executed anytime an image is converted
+          //     }
+          // });
+      
+          var imgObj = document.getElementById('test');
+      
+          function gray(imgObj) {
+              var canvas = document.createElement('canvas');
+              var canvasContext = canvas.getContext('2d');
+      
+              var imgW = imgObj.width;
+              var imgH = imgObj.height;
+              canvas.width = imgW;
+              canvas.height = imgH;
+      
+              canvasContext.drawImage(imgObj, 0, 0);
+              var imgPixels = canvasContext.getImageData(0, 0, imgW, imgH);
+      
+              for (var y = 0; y < imgPixels.height; y++) {
+                  for (var x = 0; x < imgPixels.width; x++) {
+                      var i = (y * 4) * imgPixels.width + x * 4;
+                      var avg = (imgPixels.data[i] + imgPixels.data[i + 1] + imgPixels.data[i + 2]) / 3;
+                      imgPixels.data[i] = avg;
+                      imgPixels.data[i + 1] = avg;
+                      imgPixels.data[i + 2] = avg;
                   }
-              });
+              }
+              canvasContext.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
+              return canvas.toDataURL();
+          }
       
-              var $nav = $(".nav"),
-                  $burger = $nav.find(".nav__burger");
+          imgObj.src = gray(imgObj);
+      
+          $("[data-fancybox]").fancybox({
+              btnTpl: {
+                  smallBtn:
+                      '<button data-fancybox-close class="fancybox-button fancybox-close-small" title="{{CLOSE}}">' +
+                      '<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="a" fill="#fff"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.98 15.025L1.414.459l-.955.956L15.023 15.98.46 30.545l.955.956L15.98 16.935l14.565 14.566.955-.956L16.936 15.98 31.5 1.415l-.955-.956L15.98 15.025z"/></mask><path fill-rule="evenodd" clip-rule="evenodd" d="M15.98 15.025L1.414.459l-.955.956L15.023 15.98.46 30.545l.955.956L15.98 16.935l14.565 14.566.955-.956L16.936 15.98 31.5 1.415l-.955-.956L15.98 15.025z" fill="#979797"/><path d="M1.414.46l.707-.708-.707-.707-.707.708.707.706zM15.98 15.024l-.707.707.707.707.708-.707-.707-.707zM.46 1.415L-.248.708l-.707.707.707.707.707-.707zM15.023 15.98l.708.707.707-.707-.707-.707-.708.707zM.46 30.545l-.707-.707-.707.707.707.707.707-.707zm.955.956l-.707.707.707.707.707-.707-.707-.707zM15.98 16.935l.708-.707-.707-.707-.708.707.707.707zm14.565 14.566l-.707.707.707.707.707-.707-.707-.707zm.955-.956l.707.707.707-.707-.707-.707-.707.707zM16.936 15.98l-.708-.707-.707.707.707.707.707-.707zM31.5 1.415l.707.707.707-.707-.707-.707-.707.707zm-.955-.956l.707-.706-.707-.708-.707.707.707.707zM.707 1.167l14.566 14.565 1.415-1.414L2.12-.248.707 1.167zm.46.955l.954-.956L.707-.247l-.955.955 1.414 1.414zM15.73 15.273L1.166.708-.248 2.122l14.564 14.565 1.415-1.414zm-1.415 0L-.248 29.838l1.414 1.414 14.565-14.565-1.415-1.414zM-.248 31.253l.955.955 1.414-1.414-.955-.956-1.414 1.414zm2.37.955l14.566-14.565-1.415-1.415L.707 30.794l1.414 1.414zm29.13-1.414L16.688 16.228l-1.415 1.414 14.565 14.566 1.414-1.414zm-.46-.956l-.954.956 1.414 1.414.955-.956-1.414-1.414zm-14.564-13.15l14.565 14.564 1.414-1.414-14.564-14.565-1.415 1.414zm1.415 0L32.207 2.121 30.793.708 16.228 15.273l1.415 1.414zM32.207.707l-.955-.955-1.414 1.413.955.956L32.207.708zm-2.37-.956L15.274 14.318l1.415 1.414L31.252 1.167 29.838-.248z" fill="#979797" mask="url(#a)"/></svg>' +
+                      "</button>",
+              }
+          });
+      
+          var $nav = $(".nav"),
+              $burger = $nav.find(".nav__burger");
       
       
-              $burger.on("click", function () {
-                  if ($(window).width() < 769) {
-                      $nav.toggleClass("is-show-mobile");
-                      $burger.toggleClass("is-active");
-                  }
-              });
-      
-      
+          $burger.on("click", function () {
+              if ($(window).width() < 769) {
+                  $nav.toggleClass("is-show-mobile");
+                  $burger.toggleClass("is-active");
+              }
+          });
       
       });
     </script>
