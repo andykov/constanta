@@ -71,7 +71,6 @@ block content
                                 br
                                 | Никольский
                                 span Партнер
-                                .slider-team__photo
                             img(src="img/team/03-1.png").slider-team__photo
                         div.slider-team__item
                             span.slider-team__name
@@ -201,23 +200,46 @@ block libsJS
     script.
         $(document).ready(function () {
 
-            $(window).on("load",function(){
+            function imageLoaded() {
+                counter--;
+                if (counter === 0) {
+                    images.closest('.slider-team').removeClass('is-loading');
+                    $(".slider-team__list").css('visibility', 'visible').animate({
+                        opacity: '1'
+                    }, 2000);
+                    $(window).on("load", function () {
 
-                $(".slider-team__list").mCustomScrollbar({
-                    axis: "x",
-                    scrollEasing:"linear",
-                    advanced: {
-                        autoExpandHorizontalScroll: true
-                    },
-                    documentTouchScroll: true,
-                    mouseWheel: {
-                        enable: false
-                    }
-                });
+                        $(".slider-team__list").mCustomScrollbar({
+                            axis: "x",
+                            scrollEasing: "linear",
+                            advanced: {
+                                autoExpandHorizontalScroll: true
+                            },
+                            documentTouchScroll: true,
+                            mouseWheel: {
+                                enable: false
+                            }
+                        });
 
-                setTimeout(function () {
-                    $(".slider-team__list").mCustomScrollbar('scrollTo','50%');
-                }, 100);
+                        setTimeout(function () {
+                            $(".slider-team__list").mCustomScrollbar('scrollTo', '50%');
+                        }, 100);
+                    });
+
+
+                }
+            }
+
+            $('.slider-team').addClass('is-loading');
+            var images = $('.slider-team__photo');
+            var counter = images.length;
+
+            images.each(function () {
+                if (this.complete) {
+                    imageLoaded.call(this);
+                } else {
+                    $(this).one('load', imageLoaded);
+                }
             });
 
         });

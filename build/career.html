@@ -58,8 +58,7 @@
                 <div class="slider-team__item"><span class="slider-team__name">Александр<br>Ветров<span>Менеджер Проектов</span></span><img class="slider-team__photo" src="img/team/02-1.png"></div>
                 <div class="slider-team__item"><span class="slider-team__name">Юрий<br>Харламов<span>Партнер</span></span><img class="slider-team__photo" src="img/team/08-1.png"></div>
                 <div class="slider-team__item"><span class="slider-team__name">Константин<br>Савчук<span>Партнер</span></span><img class="slider-team__photo" src="img/team/12-1.png"></div>
-                <div class="slider-team__item"><span class="slider-team__name">Георгий<br>Никольский<span>Партнер</span>
-                    <div class="slider-team__photo"></div></span><img class="slider-team__photo" src="img/team/03-1.png"></div>
+                <div class="slider-team__item"><span class="slider-team__name">Георгий<br>Никольский<span>Партнер</span></span><img class="slider-team__photo" src="img/team/03-1.png"></div>
                 <div class="slider-team__item"><span class="slider-team__name">Алексей<br>Овсянников<span>Партнер</span></span><img class="slider-team__photo" src="img/team/13-1.png"></div>
                 <div class="slider-team__item"><span class="slider-team__name">Михаил<br>Иванов<span>Менеджер Проектов</span></span><img class="slider-team__photo" src="img/team/05-1.png"></div>
                 <div class="slider-team__item"><span class="slider-team__name">Ольга<br>Ульянова<span>Менеджер Проектов</span></span><img class="slider-team__photo" src="img/team/11-1.png"></div>
@@ -142,23 +141,46 @@
     <script>
       $(document).ready(function () {
       
-          $(window).on("load",function(){
+          function imageLoaded() {
+              counter--;
+              if (counter === 0) {
+                  images.closest('.slider-team').removeClass('is-loading');
+                  $(".slider-team__list").css('visibility', 'visible').animate({
+                      opacity: '1'
+                  }, 2000);
+                  $(window).on("load", function () {
       
-              $(".slider-team__list").mCustomScrollbar({
-                  axis: "x",
-                  scrollEasing:"linear",
-                  advanced: {
-                      autoExpandHorizontalScroll: true
-                  },
-                  documentTouchScroll: true,
-                  mouseWheel: {
-                      enable: false
-                  }
-              });
+                      $(".slider-team__list").mCustomScrollbar({
+                          axis: "x",
+                          scrollEasing: "linear",
+                          advanced: {
+                              autoExpandHorizontalScroll: true
+                          },
+                          documentTouchScroll: true,
+                          mouseWheel: {
+                              enable: false
+                          }
+                      });
       
-              setTimeout(function () {
-                  $(".slider-team__list").mCustomScrollbar('scrollTo','50%');
-              }, 100);
+                      setTimeout(function () {
+                          $(".slider-team__list").mCustomScrollbar('scrollTo', '50%');
+                      }, 100);
+                  });
+      
+      
+              }
+          }
+      
+          $('.slider-team').addClass('is-loading');
+          var images = $('.slider-team__photo');
+          var counter = images.length;
+      
+          images.each(function () {
+              if (this.complete) {
+                  imageLoaded.call(this);
+              } else {
+                  $(this).one('load', imageLoaded);
+              }
           });
       
       });
