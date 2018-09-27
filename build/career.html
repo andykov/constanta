@@ -144,7 +144,8 @@
           function imageLoaded() {
               counter--;
               if (counter === 0) {
-                  
+      
+      
                   $(window).on("load", function () {
       
                       $(".slider-team__list").mCustomScrollbar({
@@ -163,6 +164,9 @@
                                       opacity: '1'
                                   }, 2000);
                                   images.closest('.slider-team').removeClass('is-loading');
+                                  // setTimeout(function () {
+                                  //     images.closest('.slider-team').removeClass('is-loading');
+                                  // }, 3000);
                               }
                           }
                       });
@@ -170,6 +174,11 @@
                           timeout: 0,
                           scrollInertia: 0
                       });
+      
+      
+                      // setTimeout(function () {
+                      //     images.closest('.slider-team').removeClass('is-loading');
+                      // }, 3000);
                   });
               }
           }
