@@ -203,10 +203,7 @@ block libsJS
             function imageLoaded() {
                 counter--;
                 if (counter === 0) {
-                    images.closest('.slider-team').removeClass('is-loading');
-                    $(".slider-team__list").css('visibility', 'visible').animate({
-                        opacity: '1'
-                    }, 2000);
+                    
                     $(window).on("load", function () {
 
                         $(".slider-team__list").mCustomScrollbar({
@@ -218,15 +215,21 @@ block libsJS
                             documentTouchScroll: true,
                             mouseWheel: {
                                 enable: false
+                            },
+                            callbacks: {
+                                onInit: function () {
+                                    $(".slider-team__list").css('visibility', 'visible').animate({
+                                        opacity: '1'
+                                    }, 2000);
+                                    images.closest('.slider-team').removeClass('is-loading');
+                                }
                             }
                         });
-
-                        setTimeout(function () {
-                            $(".slider-team__list").mCustomScrollbar('scrollTo', '50%');
-                        }, 100);
+                        $(".slider-team__list").mCustomScrollbar('scrollTo', '50%', {
+                            timeout: 0,
+                            scrollInertia: 0
+                        });
                     });
-
-
                 }
             }
 
