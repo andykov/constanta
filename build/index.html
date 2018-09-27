@@ -136,40 +136,40 @@
           <h2 class="is-size-2 has-text-centered">Некоторые клиенты</h2>
           <div class="columns is-multiline is-vcentered">
             <div class="column is-4">
-              <figure class="image bwWrapper"><img id="test" src="img/svg/clients-logo/logo-mts.svg" width="309px" height="140px"></figure>
+              <figure class="image is-grayscale"><img src="img/svg/clients-logo/logo-mts.svg" width="309px" height="140px"><img class="is-gray" src="img/svg/clients-logo/logo-mts-gray.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image bwWrapper"><img src="img/svg/clients-logo/logo-rostelecom.svg" width="309px" height="140px"></figure>
+              <figure class="image"><img src="img/svg/clients-logo/logo-rostelecom.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image bwWrapper"><img src="img/svg/clients-logo/logo-beeline.svg" width="309px" height="140px"></figure>
+              <figure class="image"><img src="img/svg/clients-logo/logo-beeline.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image bwWrapper"><img src="img/svg/clients-logo/logo-pepsico.svg" width="309px" height="140px"></figure>
+              <figure class="image"><img src="img/svg/clients-logo/logo-pepsico.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image bwWrapper"><img src="img/svg/clients-logo/logo-alfabank.svg" width="309px" height="140px"></figure>
+              <figure class="image"><img src="img/svg/clients-logo/logo-alfabank.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image bwWrapper"><img src="img/svg/clients-logo/logo-euroset.svg" width="309px" height="140px"></figure>
+              <figure class="image"><img src="img/svg/clients-logo/logo-euroset.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image bwWrapper"><img src="img/svg/clients-logo/logo-norilsk.svg" width="309px" height="140px"></figure>
+              <figure class="image"><img src="img/svg/clients-logo/logo-norilsk.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image bwWrapper"><img src="img/svg/clients-logo/logo-rosneft.svg" width="309px" height="140px"></figure>
+              <figure class="image"><img src="img/svg/clients-logo/logo-rosneft.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image bwWrapper"><img src="img/svg/clients-logo/logo-vgtrk.svg" width="309px" height="140px"></figure>
+              <figure class="image"><img src="img/svg/clients-logo/logo-vgtrk.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image bwWrapper"><img src="img/svg/clients-logo/logo-baring.svg" width="309px" height="140px"></figure>
+              <figure class="image"><img src="img/svg/clients-logo/logo-baring.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image bwWrapper"><img src="img/svg/clients-logo/logo-o1.svg" width="309px" height="140px"></figure>
+              <figure class="image"><img src="img/svg/clients-logo/logo-o1.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image bwWrapper"><img src="img/svg/clients-logo/logo-capman.svg" width="309px" height="140px"></figure>
+              <figure class="image"><img src="img/svg/clients-logo/logo-capman.svg" width="309px" height="140px"></figure>
             </div>
           </div>
         </div>
@@ -219,7 +219,12 @@
           //     }
           // });
       
-          var imgObj = document.getElementById('test');
+          // var imgObj1 = document.getElementById('test');
+          // console.log(el);
+      
+          var imgObj = document.querySelectorAll('.slider-team__photo');
+          // var imgObj = document.querySelectorAll('img');
+      
       
           function gray(imgObj) {
               var canvas = document.createElement('canvas');
@@ -245,8 +250,17 @@
               canvasContext.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
               return canvas.toDataURL();
           }
+          setTimeout(function () {
+                      Array.prototype.forEach.call(imgObj, function (el, i) {
+                          console.log(el);
+                          el.src = gray(el);
+                      });
+          }, 2000);
       
-          imgObj.src = gray(imgObj);
+      
+      
+      
+      
       
           $("[data-fancybox]").fancybox({
               btnTpl: {

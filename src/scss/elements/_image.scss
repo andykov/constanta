@@ -90,73 +90,101 @@ $dimensions: 16 24 32 48 64 96 128 !default;
   //  }
   //}
 }
-.bwWrapper {
-  position:relative;
-  display:block;
-}
-.is-grayscale {
-  //filter: grayscale(1);
-  //opacity: 0.5;
-  //transition: all 0.2s;
-  //
-  //&:hover {
-  //  filter: grayscale(0);
-  //  opacity: 1;
-  //}
-}
 
-/*! Gray v1.6.0 (https://github.com/karlhorky/gray) | MIT */
-.is-grayscale {
-  /* Firefox 10-34 */
-  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale");
+//.is-grayscale {
+//  //filter: grayscale(1);
+//  //opacity: 0.5;
+//  //transition: all 0.2s;
+//  //
+//  //&:hover {
+//  //  filter: grayscale(0);
+//  //  opacity: 1;
+//  //}
+//}
+//
+///*! Gray v1.6.0 (https://github.com/karlhorky/gray) | MIT */
+//.is-grayscale {
+//  /* Firefox 10-34 */
+//  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale");
+//
+//  /*
+//    Chrome 19+,
+//    Safari 6+,
+//    Safari 6+ iOS,
+//    Opera 15+
+//  */
+//  -webkit-filter: grayscale(1);
+//
+//  /* Firefox 35+ */
+//  filter: grayscale(1);
+//
+//  /* IE 6-9 */
+//  filter: gray;
+//
+//
+//  &.grayscale-fade {
+//    transition: filter .5s;
+//  }
+//
+//  /* Webkit hack until filter is unprefixed */
+//  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+//    &.grayscale-fade {
+//      -webkit-transition: -webkit-filter .5s;
+//      transition:         -webkit-filter .5s;
+//    }
+//  }
+//
+//  &.grayscale-off,
+//  &.grayscale-fade:hover {
+//    -webkit-filter: grayscale(0);
+//    filter:         grayscale(0);
+//  }
+//
+//  /* Background element */
+//  &.grayscale-replaced {
+//    -webkit-filter: none;
+//    filter:         none;
+//  }
+//
+//  &.grayscale-replaced > svg {
+//    -webkit-transition: opacity .5s ease;
+//    transition:         opacity .5s ease;
+//    opacity: 1;
+//  }
+//
+//  &.grayscale-replaced.grayscale-off > svg,
+//  &.grayscale-replaced.grayscale-fade:hover > svg {
+//    opacity: 0;
+//  }
+//}
 
-  /*
-    Chrome 19+,
-    Safari 6+,
-    Safari 6+ iOS,
-    Opera 15+
-  */
-  -webkit-filter: grayscale(1);
-
-  /* Firefox 35+ */
-  filter: grayscale(1);
-
-  /* IE 6-9 */
-  filter: gray;
+.image {
 
 
-  &.grayscale-fade {
-    transition: filter .5s;
-  }
-
-  /* Webkit hack until filter is unprefixed */
-  @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    &.grayscale-fade {
-      -webkit-transition: -webkit-filter .5s;
-      transition:         -webkit-filter .5s;
+  &.is-grayscale {
+    position: relative;
+    img:not(.is-gray) {
+      opacity: 0;
+      transition: opacity 0.6s;
     }
-  }
+    .is-gray {
+      opacity: 1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: opacity 0.5s;
+    }
 
-  &.grayscale-off,
-  &.grayscale-fade:hover {
-    -webkit-filter: grayscale(0);
-    filter:         grayscale(0);
-  }
-
-  /* Background element */
-  &.grayscale-replaced {
-    -webkit-filter: none;
-    filter:         none;
-  }
-
-  &.grayscale-replaced > svg {
-    -webkit-transition: opacity .5s ease;
-    transition:         opacity .5s ease;
-    opacity: 1;
-  }
-
-  &.grayscale-replaced.grayscale-off > svg,
-  &.grayscale-replaced.grayscale-fade:hover > svg {
-    opacity: 0;
+    &:hover {
+      img:not(.is-gray) {
+        opacity: 1;
+        transition: opacity 0.5s;
+      }
+      .is-gray {
+        opacity: 0;
+        transition: opacity 0.6s;
+        z-index: -1;
+      }
+    }
   }
 }

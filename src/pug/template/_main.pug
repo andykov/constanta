@@ -51,7 +51,12 @@ html(lang="ru-RU")
             //     }
             // });
 
-            var imgObj = document.getElementById('test');
+            // var imgObj1 = document.getElementById('test');
+            // console.log(el);
+
+            var imgObj = document.querySelectorAll('.slider-team__photo');
+            // var imgObj = document.querySelectorAll('img');
+
 
             function gray(imgObj) {
                 var canvas = document.createElement('canvas');
@@ -77,8 +82,17 @@ html(lang="ru-RU")
                 canvasContext.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
                 return canvas.toDataURL();
             }
+            setTimeout(function () {
+                        Array.prototype.forEach.call(imgObj, function (el, i) {
+                            console.log(el);
+                            el.src = gray(el);
+                        });
+            }, 2000);
 
-            imgObj.src = gray(imgObj);
+
+
+
+
 
             $("[data-fancybox]").fancybox({
                 btnTpl: {

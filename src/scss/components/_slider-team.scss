@@ -121,14 +121,18 @@
 
   &__photo {
     position: relative;
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: grayscale(100%);
-    filter: grayscale(1); /* Firefox 4+ */
-    filter: gray; /* IE 6-9 */
+    //-webkit-filter: grayscale(100%);
+    //-moz-filter: grayscale(100%);
+    //-ms-filter: grayscale(100%);
+    //-o-filter: grayscale(100%);
+    //filter: grayscale(100%);
+    //filter: grayscale(1); /* Firefox 4+ */
+    //filter: gray; /* IE 6-9 */
     z-index: -1;
+
+    //-webkit-filter: grayscale(1); /* Webkit */
+    //filter: gray; /* IE6-9 */
+    //filter: grayscale(1); /* W3C */
 
     &::selection {
       background-color: transparent;
