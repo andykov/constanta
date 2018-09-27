@@ -139,37 +139,37 @@
               <figure class="image is-grayscale"><img src="img/svg/clients-logo/logo-mts.svg" width="309px" height="140px"><img class="is-gray" src="img/svg/clients-logo/logo-mts-gray.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image"><img src="img/svg/clients-logo/logo-rostelecom.svg" width="309px" height="140px"></figure>
+              <figure class="image is-grayscale"><img src="img/svg/clients-logo/logo-rostelecom.svg" width="309px" height="140px"><img class="is-gray" src="img/svg/clients-logo/logo-rostelecom-gray.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image"><img src="img/svg/clients-logo/logo-beeline.svg" width="309px" height="140px"></figure>
+              <figure class="image is-grayscale"><img src="img/svg/clients-logo/logo-beeline.svg" width="309px" height="140px"><img class="is-gray" src="img/svg/clients-logo/logo-beeline-gray.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image"><img src="img/svg/clients-logo/logo-pepsico.svg" width="309px" height="140px"></figure>
+              <figure class="image is-grayscale"><img src="img/svg/clients-logo/logo-pepsico.svg" width="309px" height="140px"><img class="is-gray" src="img/svg/clients-logo/logo-pepsico-gray.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image"><img src="img/svg/clients-logo/logo-alfabank.svg" width="309px" height="140px"></figure>
+              <figure class="image is-grayscale"><img src="img/svg/clients-logo/logo-alfabank.svg" width="309px" height="140px"><img class="is-gray" src="img/svg/clients-logo/logo-alfabank-gray.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image"><img src="img/svg/clients-logo/logo-euroset.svg" width="309px" height="140px"></figure>
+              <figure class="image is-grayscale"><img src="img/svg/clients-logo/logo-euroset.svg" width="309px" height="140px"><img class="is-gray" src="img/svg/clients-logo/logo-euroset-gray.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image"><img src="img/svg/clients-logo/logo-norilsk.svg" width="309px" height="140px"></figure>
+              <figure class="image is-grayscale"><img src="img/svg/clients-logo/logo-norilsk.svg" width="309px" height="140px"><img class="is-gray" src="img/svg/clients-logo/logo-norilsk-gray.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image"><img src="img/svg/clients-logo/logo-rosneft.svg" width="309px" height="140px"></figure>
+              <figure class="image is-grayscale"><img src="img/svg/clients-logo/logo-rosneft.svg" width="309px" height="140px"><img class="is-gray" src="img/svg/clients-logo/logo-rosneft-gray.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image"><img src="img/svg/clients-logo/logo-vgtrk.svg" width="309px" height="140px"></figure>
+              <figure class="image is-grayscale"><img src="img/svg/clients-logo/logo-vgtrk.svg" width="309px" height="140px"><img class="is-gray" src="img/svg/clients-logo/logo-vgtrk-gray.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image"><img src="img/svg/clients-logo/logo-baring.svg" width="309px" height="140px"></figure>
+              <figure class="image is-grayscale"><img src="img/svg/clients-logo/logo-baring.svg" width="309px" height="140px"><img class="is-gray" src="img/svg/clients-logo/logo-baring-gray.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image"><img src="img/svg/clients-logo/logo-o1.svg" width="309px" height="140px"></figure>
+              <figure class="image is-grayscale"><img src="img/svg/clients-logo/logo-o1.svg" width="309px" height="140px"><img class="is-gray" src="img/svg/clients-logo/logo-o1-gray.svg" width="309px" height="140px"></figure>
             </div>
             <div class="column is-4">
-              <figure class="image"><img src="img/svg/clients-logo/logo-capman.svg" width="309px" height="140px"></figure>
+              <figure class="image is-grayscale"><img src="img/svg/clients-logo/logo-capman.svg" width="309px" height="140px"><img class="is-gray" src="img/svg/clients-logo/logo-capman-gray.svg" width="309px" height="140px"></figure>
             </div>
           </div>
         </div>
@@ -200,67 +200,7 @@
     <script src="js/libs/jquery.fancybox.min.js"></script>
     <script>
       $(document).ready(function () {
-          // $('.is-grayscale').gray();
-          // $('img').grayscale();
-          // $('.image').BlackAndWhite({
-          //     hoverEffect: true, // default true
-          //     // set the path to BnWWorker.js for a superfast implementation
-          //     webworkerPath: false,
-          //     // to invert the hover effect
-          //     invertHoverEffect: false,
-          //     // this option works only on the modern browsers ( on IE lower than 9 it remains always 1)
-          //     intensity: 1,
-          //     speed: { //this property could also be just speed: value for both fadeIn and fadeOut
-          //         fadeIn: 200, // 200ms for fadeIn animations
-          //         fadeOut: 800 // 800ms for fadeOut animations
-          //     },
-          //     onImageReady: function (img) {
-          //         // this callback gets executed anytime an image is converted
-          //     }
-          // });
-      
-          // var imgObj1 = document.getElementById('test');
-          // console.log(el);
-      
-          var imgObj = document.querySelectorAll('.slider-team__photo');
-          // var imgObj = document.querySelectorAll('img');
-      
-      
-          function gray(imgObj) {
-              var canvas = document.createElement('canvas');
-              var canvasContext = canvas.getContext('2d');
-      
-              var imgW = imgObj.width;
-              var imgH = imgObj.height;
-              canvas.width = imgW;
-              canvas.height = imgH;
-      
-              canvasContext.drawImage(imgObj, 0, 0);
-              var imgPixels = canvasContext.getImageData(0, 0, imgW, imgH);
-      
-              for (var y = 0; y < imgPixels.height; y++) {
-                  for (var x = 0; x < imgPixels.width; x++) {
-                      var i = (y * 4) * imgPixels.width + x * 4;
-                      var avg = (imgPixels.data[i] + imgPixels.data[i + 1] + imgPixels.data[i + 2]) / 3;
-                      imgPixels.data[i] = avg;
-                      imgPixels.data[i + 1] = avg;
-                      imgPixels.data[i + 2] = avg;
-                  }
-              }
-              canvasContext.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
-              return canvas.toDataURL();
-          }
-          setTimeout(function () {
-                      Array.prototype.forEach.call(imgObj, function (el, i) {
-                          console.log(el);
-                          el.src = gray(el);
-                      });
-          }, 2000);
-      
-      
-      
-      
-      
+          
       
           $("[data-fancybox]").fancybox({
               btnTpl: {
